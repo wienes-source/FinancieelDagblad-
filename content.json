@@ -1,0 +1,273 @@
+{
+  "settings": {
+    "publication": "FINANCIEEL DAGBLAD WINN",
+    "tagline": "De krant voor economie, ontwikkeling en welvaart",
+    "location": "Paramaribo",
+    "siteUrl": "",
+    "contactEmail": "",
+    "currencyNotice": "Marktgegevens in deze demo zijn voorbeeldgegevens en worden later door actuele gegevens vervangen."
+  },
+  "editions": [
+    {
+      "date": "2026-09-05",
+      "displayDate": "Zaterdag 5 september 2026",
+      "number": "Editie 248",
+      "year": "Jaargang 1",
+      "priceEur": "€ 1,00",
+      "priceSrd": "SRD 38,00",
+      "label": "Voorbeeldeditie",
+      "summary": "Olie & gas, infrastructuur, landbouw, toerisme, markten en regionale economie.",
+      "articleIds": [
+        "olie-gas-ontwikkeling",
+        "waterbeheer-infrastructuur",
+        "veiligheidsaanpak",
+        "landbouw-bodemonderzoek",
+        "toerisme-herstel",
+        "digitalisering-overheid",
+        "guyana-olieproductie",
+        "india-cariben-handel",
+        "frans-guyana-verbinding",
+        "frans-guyana-duurzame-energie",
+        "brazilie-noord-logistiek"
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "displayDate": "Vrijdag 4 september 2026",
+      "number": "Editie 247",
+      "year": "Jaargang 1",
+      "priceEur": "€ 1,00",
+      "priceSrd": "SRD 38,00",
+      "label": "Archief",
+      "summary": "Voorbeeld van een oudere editie in het digitale archief.",
+      "articleIds": []
+    }
+  ],
+  "articles": [
+    {
+      "id": "olie-gas-ontwikkeling",
+      "date": "2026-09-05",
+      "section": "Economie",
+      "category": "economie",
+      "title": "Suriname start nieuwe fase in olie- en gasontwikkeling",
+      "subtitle": "Meer zekerheid, meer kansen voor de economie",
+      "image": "assets/olie-gas.jpg",
+      "lead": "De ontwikkeling van de olie- en gassector kan de komende jaren grote invloed hebben op overheidsinkomsten, werkgelegenheid en lokale bedrijvigheid.",
+      "body": [
+        "De Surinaamse economie staat voor een nieuwe fase waarin energieprojecten een grotere rol kunnen gaan spelen. De belangrijkste economische vraag is hoe nieuwe inkomsten structureel worden ingezet.",
+        "Voor bedrijven liggen kansen in dienstverlening, logistiek, techniek en opleiding. Tegelijkertijd blijft transparantie rond publieke inkomsten en langetermijnplanning essentieel.",
+        "FINANCIEEL DAGBLAD WINN volgt de economische effecten, investeringsbesluiten en gevolgen voor burgers en ondernemers."
+      ],
+      "featured": true
+    },
+    {
+      "id": "waterbeheer-infrastructuur",
+      "date": "2026-09-05",
+      "section": "Infrastructuur",
+      "category": "economie",
+      "title": "Investeringen in betere infrastructuur en waterbeheer",
+      "subtitle": "Nieuwe pompcapaciteit moet wateroverlast helpen beperken",
+      "image": "assets/waterbeheer.jpg",
+      "lead": "Klimaatbestendige infrastructuur wordt belangrijker voor wonen, ondernemen en bereikbaarheid.",
+      "body": [
+        "Waterbeheer raakt direct aan economische ontwikkeling. Betere afwatering en betrouwbare infrastructuur kunnen schade aan woningen, winkels en wegen beperken.",
+        "Investeringen in pompcapaciteit, onderhoud en lokale waterwerken vragen om meerjarige planning en inzicht in kosten en prestaties.",
+        "De krant volgt voortgang, financiering en oplevering van grote infrastructuurprojecten."
+      ],
+      "featured": true
+    },
+    {
+      "id": "veiligheidsaanpak",
+      "date": "2026-09-05",
+      "section": "Samenleving",
+      "category": "nieuws",
+      "title": "Nationale veiligheidsaanpak: samen sterker tegen criminaliteit",
+      "subtitle": "Preventie, grensbewaking en cyberveiligheid krijgen meer aandacht",
+      "image": "assets/veiligheid.jpg",
+      "lead": "Veiligheid is ook een economische randvoorwaarde: ondernemers en huishoudens zijn gebaat bij voorspelbaarheid en vertrouwen.",
+      "body": [
+        "Een brede veiligheidsaanpak combineert preventie, opsporing en digitale weerbaarheid.",
+        "Voor het bedrijfsleven zijn vooral cybercriminaliteit, fraude en veiligheid rond logistieke stromen belangrijke aandachtspunten."
+      ]
+    },
+    {
+      "id": "landbouw-bodemonderzoek",
+      "date": "2026-09-05",
+      "section": "Landbouw",
+      "category": "sectoren",
+      "title": "Landbouwers krijgen uitgebreider bodemonderzoek",
+      "subtitle": "Meer kennis over bodemkwaliteit moet productiviteit ondersteunen",
+      "image": "assets/landbouw.jpg",
+      "lead": "Gericht bodemonderzoek kan boeren helpen efficiënter om te gaan met meststoffen, water en gewaskeuze.",
+      "body": [
+        "Duurzame landbouw vraagt om betrouwbare gegevens over bodemkwaliteit en opbrengstpotentieel.",
+        "Met betere informatie kunnen landbouwers gerichter investeren en risico's verkleinen."
+      ]
+    },
+    {
+      "id": "toerisme-herstel",
+      "date": "2026-09-05",
+      "section": "Toerisme",
+      "category": "sectoren",
+      "title": "Toerisme toont herstel met meer internationale bezoekers",
+      "subtitle": "Nieuwe kansen voor hotels, vervoer en recreatie",
+      "image": "assets/toerisme.jpg",
+      "lead": "Een groeiende bezoekersstroom kan extra vraag creëren naar accommodaties, horeca, transport en excursies.",
+      "body": [
+        "De toerismesector heeft een brede economische uitstraling omdat inkomsten terechtkomen bij veel verschillende bedrijven.",
+        "Kwaliteit, bereikbaarheid, veiligheid en internationale promotie blijven bepalend voor verdere groei."
+      ]
+    },
+    {
+      "id": "digitalisering-overheid",
+      "date": "2026-09-05",
+      "section": "IT & Innovatie",
+      "category": "sectoren",
+      "title": "Digitalisering overheid versnelt dienstverlening",
+      "subtitle": "Meer digitale processen kunnen doorlooptijden verkorten",
+      "image": "assets/it.jpg",
+      "lead": "Digitale dienstverlening kan administratieve lasten voor burgers en bedrijven verminderen.",
+      "body": [
+        "Goed ontworpen digitale processen kunnen aanvragen en betalingen eenvoudiger maken.",
+        "Daarbij zijn informatiebeveiliging, privacy en toegankelijkheid belangrijke voorwaarden."
+      ]
+    },
+    {
+      "id": "guyana-olieproductie",
+      "date": "2026-09-05",
+      "section": "Guyana",
+      "category": "regio",
+      "title": "Guyana: olieproductie en investeringen blijven belangrijk voor de regio",
+      "subtitle": "Ontwikkelingen kunnen ook kansen bieden voor Surinaamse bedrijven",
+      "image": "assets/investeringen.jpg",
+      "lead": "De groei van de energiesector in Guyana heeft gevolgen voor logistiek, arbeidsmarkt en grensoverschrijdende dienstverlening.",
+      "body": [
+        "Regionale investeringen kunnen extra vraag creëren naar havendiensten, techniek, transport en zakelijke dienstverlening.",
+        "Voor Suriname is het relevant om te volgen welke activiteiten lokaal kunnen worden ontwikkeld en welke samenwerking mogelijk is."
+      ]
+    },
+    {
+      "id": "india-cariben-handel",
+      "date": "2026-09-05",
+      "section": "India",
+      "category": "regio",
+      "title": "India en het Caribisch gebied zoeken meer economische samenwerking",
+      "subtitle": "Handel, technologie en kennisuitwisseling in beeld",
+      "image": "assets/it.jpg",
+      "lead": "Nieuwe economische relaties kunnen mogelijkheden bieden voor handel, technologie, farmacie en onderwijs.",
+      "body": [
+        "De combinatie van een grote Indiase markt en de positie van het Caribisch gebied maakt samenwerking op verschillende terreinen interessant.",
+        "FINANCIEEL DAGBLAD WINN volgt concrete projecten en investeringsmogelijkheden zodra deze beschikbaar zijn."
+      ]
+    },
+    {
+      "id": "frans-guyana-verbinding",
+      "date": "2026-09-05",
+      "section": "Frans-Guyana",
+      "category": "regio",
+      "title": "Frans-Guyana: bereikbaarheid en regionale verbindingen in ontwikkeling",
+      "subtitle": "Betere verbindingen kunnen handel en personenverkeer ondersteunen",
+      "image": "assets/reizen.jpg",
+      "lead": "Infrastructuur en grensoverschrijdende samenwerking zijn belangrijke thema’s voor de economische ontwikkeling van de regio.",
+      "body": [
+        "Betere verbindingen kunnen reistijden verkorten en zakelijke contacten vergemakkelijken.",
+        "Daarbij blijven grensprocedures, infrastructuurkwaliteit en logistieke capaciteit belangrijke aandachtspunten."
+      ]
+    },
+    {
+      "id": "frans-guyana-duurzame-energie",
+      "date": "2026-09-05",
+      "section": "Frans-Guyana",
+      "category": "regio",
+      "title": "Frans-Guyana: duurzame energie blijft een regionaal aandachtspunt",
+      "subtitle": "Energievoorziening en klimaatbestendigheid vragen om langetermijninvesteringen",
+      "image": "assets/zonnepanelen.jpg",
+      "lead": "De energietransitie in de regio kan nieuwe markten creëren voor techniek, opslag en duurzame infrastructuur.",
+      "body": [
+        "Zonne-energie, netcapaciteit en opslag zijn thema’s die steeds vaker samen worden bekeken.",
+        "Regionale ervaring kan relevant zijn voor Surinaamse projecten op het gebied van duurzame energie."
+      ]
+    },
+    {
+      "id": "brazilie-noord-logistiek",
+      "date": "2026-09-05",
+      "section": "Brazilië",
+      "category": "regio",
+      "title": "Noord-Brazilië investeert verder in logistiek en verbindingen",
+      "subtitle": "Regionale handelsroutes kunnen hierdoor aantrekkelijker worden",
+      "image": "assets/investeringen.jpg",
+      "lead": "Nieuwe logistieke investeringen kunnen invloed hebben op goederenstromen tussen Brazilië, Suriname en het Caribisch gebied.",
+      "body": [
+        "Voor bedrijven zijn reistijd, betrouwbaarheid en kosten van transport doorslaggevende factoren.",
+        "Nieuwe verbindingen kunnen daarom op termijn nieuwe handelsmogelijkheden openen."
+      ]
+    }
+  ],
+  "markets": {
+    "label": "Voorbeeldcijfers uit editie 5 september 2026",
+    "fx": [
+      {
+        "name": "USD/SRD",
+        "value": "37,91",
+        "day": "+0,12",
+        "week": "+1,05%"
+      },
+      {
+        "name": "EUR/SRD",
+        "value": "44,09",
+        "day": "+0,18",
+        "week": "+0,41%"
+      },
+      {
+        "name": "EUR/USD",
+        "value": "1,1630",
+        "day": "+0,02",
+        "week": "+0,30%"
+      }
+    ],
+    "commodities": [
+      {
+        "name": "Goud",
+        "value": "4.468",
+        "trend": "+2,1%"
+      },
+      {
+        "name": "Olie Brent",
+        "value": "96,06",
+        "trend": "+4,5%"
+      },
+      {
+        "name": "Olie WTI",
+        "value": "92,10",
+        "trend": "+4,8%"
+      },
+      {
+        "name": "Bauxiet",
+        "value": "58,00",
+        "trend": "+1,8%"
+      }
+    ],
+    "stocks": [
+      {
+        "name": "DSB",
+        "value": "36,50",
+        "trend": "+1,4%"
+      },
+      {
+        "name": "FHB",
+        "value": "22,00",
+        "trend": "0,0%"
+      },
+      {
+        "name": "SPSB",
+        "value": "9,80",
+        "trend": "+2,1%"
+      },
+      {
+        "name": "SURI",
+        "value": "4,25",
+        "trend": "-1,2%"
+      }
+    ]
+  }
+}

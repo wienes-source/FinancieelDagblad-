@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{WINN.cards(document.body.dataset.category||'','articleCards');WINN.search('pageSearch','pageSearchButton','pageSearchResults');});

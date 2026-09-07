@@ -1,0 +1,31 @@
+{
+  "instructie": "Gebruik data/content.json als enige bron. Dit is alleen een voorbeeld.",
+  "nieuwe_editie_voorbeeld": {
+    "date": "2026-09-08",
+    "displayDate": "Dinsdag 8 september 2026",
+    "number": "Editie 249",
+    "year": "Jaargang 1",
+    "priceEur": "€ 1,00",
+    "priceSrd": "SRD 00,00",
+    "label": "Nieuwe editie",
+    "summary": "Korte samenvatting.",
+    "articleIds": [
+      "uniek-artikel-id"
+    ]
+  },
+  "nieuw_artikel_voorbeeld": {
+    "id": "uniek-artikel-id",
+    "date": "2026-09-08",
+    "section": "Economie",
+    "category": "economie",
+    "title": "Titel van het artikel",
+    "subtitle": "Ondertitel",
+    "image": "assets/nieuwe-foto.jpg",
+    "lead": "Korte intro.",
+    "body": [
+      "Eerste alinea.",
+      "Tweede alinea."
+    ],
+    "featured": true
+  }
+}

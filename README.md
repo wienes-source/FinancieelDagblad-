@@ -1,13 +1,17 @@
-# FINANCIEEL DAGBLAD WINN
+# FINANCIEEL DAGBLAD WINN — V4 “ÉÉN COMMIT”
 
-Professionele, responsive GitHub Pages-website voor FINANCIEEL DAGBLAD WINN.
+De hele website wordt na de eerste upload opgebouwd uit één inhoudsbestand: `data/content.json`.
 
-## Publiceren
-1. Upload alle bestanden uit deze map naar de hoofdmap van de GitHub-repository.
-2. GitHub → Settings → Pages.
-3. Source: **Deploy from a branch**.
-4. Branch: **main**, folder: **/(root)**.
-5. Save.
+## Later vernieuwen
+1. Open `data/content.json` in GitHub.
+2. Klik op Edit (potlood).
+3. Voeg de nieuwe editie, artikelen en marktgegevens toe.
+4. Klik **Commit changes**.
 
-## Belangrijk
-De website is mobielvriendelijk en gebruikt de voorpagina als visuele inspiratie. In de webversie staat als locatie alleen **Paramaribo** en zijn geen verwijzingen naar politieke partijen opgenomen.
+Klaar. GitHub Pages publiceert de wijziging automatisch. U hoeft `index.html`, rubriekpagina’s, artikelpagina’s of het archief niet meer handmatig bij te werken.
+
+## Afbeeldingen
+Voor een nieuwe eigen foto uploadt u die naar `assets/` en gebruikt u bijvoorbeeld `"image": "assets/nieuwe-foto.jpg"` in `content.json`. Daarna dezelfde Commit changes.
+
+## GitHub Pages
+Source: Deploy from a branch · Branch: main · Folder: /(root)

@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#075c46"><title>Voorpagina | FINANCIEEL DAGBLAD WINN</title>
+<meta name="theme-color" content="#075c46"><title>Nieuws | FINANCIEEL DAGBLAD WINN</title>
 <meta name="description" content="FINANCIEEL DAGBLAD WINN — economie, ontwikkeling en welvaart in Suriname.">
 <link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css"></head>
-<body >
+<body data-category="nieuws">
 <div class="topbar"><div class="pagewide"><span>FINANCIEEL DAGBLAD WINN · Paramaribo</span><span class="hide-mobile"><a href="abonnement.html">Abonnement</a><a href="over-ons.html">Over ons</a></span></div></div>
 <header class="masthead">
   <div class="flagmark" aria-hidden="true"><span class="green"></span><span class="red"></span><span class="green"></span></div>
@@ -21,7 +21,13 @@
   <div class="edition" id="editionCard"><span class="day">LAATSTE EDITIE</span><strong>Wordt geladen…</strong></div>
 </header>
 <div class="progress-strip"><b>SURINAME STAP VOORUIT</b><span>STABIELE ECONOMIE</span><span>STERKE SAMENLEVING</span><span>EEN DUURZAME TOEKOMST</span></div>
-<main><section class="search-panel"><div><span class="eyebrow">DIGITALE KRANT</span><h2>Zoek in FINANCIEEL DAGBLAD WINN</h2></div><div class="search-box"><input id="siteSearch" type="search" placeholder="Zoek op onderwerp, sector of titel…"><button id="searchButton" type="button">Zoeken</button></div></section><div id="searchResults" class="search-results" hidden></div><section id="dynamicLead" class="lead-grid"><p>Laatste hoofdartikelen worden geladen…</p></section><section id="dynamicSecondary" class="three-stories"></section><section class="market-region-grid"><div><header class="section-head blue"><h2>REGIO &amp; WERELD</h2><span>Internationale ontwikkelingen met impact voor Suriname</span></header><div id="dynamicRegion" class="country-grid"></div></div><aside class="markets"><section class="marketbox"><header class="section-head greenbar"><h2>SRD KOERSMONITOR</h2></header><div id="homeMarketLabel" class="asof"></div><table><thead><tr><th>Munt</th><th>Koers</th><th>1 dag</th></tr></thead><tbody id="homeFxRows"></tbody></table><p class="analysis"><a href="markten.html"><b>Open volledige marktmonitor →</b></a></p></section><section class="marketbox"><header class="section-head greenbar"><h2>GRONDSTOFFEN</h2></header><table><thead><tr><th>Product</th><th>Prijs</th><th>Trend</th></tr></thead><tbody id="homeCommodityRows"></tbody></table></section></aside></section><section class="page-title"><span class="eyebrow">LAATSTE EDITIE</span><h2>Meer uit de krant</h2><p>De voorpagina, rubrieken, artikelen en het archief worden automatisch uit één inhoudsbestand opgebouwd.</p></section><section id="dynamicLatest" class="cards"></section></main>
+<main>
+<section class="page-title"><span class="eyebrow">NIEUWS</span><h2>Nieuws</h2><p>Algemeen nieuws en ontwikkelingen met economische of maatschappelijke betekenis voor Suriname.</p></section>
+<section class="search-panel"><div><span class="eyebrow">ZOEKEN</span><h2>Zoek binnen de krant</h2></div>
+<div class="search-box"><input id="pageSearch" type="search" placeholder="Zoek artikel…"><button id="pageSearchButton">Zoeken</button></div></section>
+<div id="pageSearchResults" class="search-results" hidden></div>
+<section id="articleCards" class="cards"></section>
+</main>
 <footer>
   <div><strong>FINANCIEEL DAGBLAD WINN</strong><span>De krant voor economie, ontwikkeling en welvaart</span>
     <div class="footer-links"><a href="index.html">Voorpagina</a><a href="archief.html">Archief</a><a href="abonnement.html">Abonnement</a><a href="over-ons.html">Over ons</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
@@ -29,4 +35,4 @@
   <div class="footer-meta"><span>Paramaribo</span><span>Digitaal &amp; print</span><span>© 2026 FINANCIEEL DAGBLAD WINN</span></div>
 </footer>
 <script src="js/core.js"></script>
-<script src="js/home.js"></script></body></html>
+<script src="js/listing.js"></script></body></html>
