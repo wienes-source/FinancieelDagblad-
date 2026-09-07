@@ -3,105 +3,203 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FINANCIEEL DAGBLAD WINN – financieel en economisch nieuws uit Suriname en de regio.">
-  <title>FINANCIEEL DAGBLAD WINN</title>
+  <meta name="theme-color" content="#075c46">
+  <title>Financieel Dagblad WINN</title>
+  <meta name="description" content="FINANCIEEL DAGBLAD WINN — economie, ontwikkeling en welvaart in Suriname.">
+  <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="topline">
-      <span>Paramaribo</span>
-      <span id="today"></span>
+  <header class="masthead">
+    <div class="flagmark" aria-hidden="true">
+      <span class="green"></span><span class="red"></span><span class="green"></span>
     </div>
-    <div class="brand-row container">
-      <div class="mark" aria-hidden="true">W</div>
-      <div>
-        <p class="eyebrow">Onafhankelijk financieel nieuws</p>
-        <h1>FINANCIEEL DAGBLAD <span>WINN</span></h1>
-      </div>
+
+    <div class="brand">
+      <h1><span>FINANCIEEL DAGBLAD</span> <strong>WINN</strong></h1>
+      <p>DE KRANT VOOR ECONOMIE, ONTWIKKELING EN WELVAART</p>
+      <nav aria-label="Hoofdmenu">
+        <a href="#economie">ECONOMIE</a>
+        <a href="#regio">REGIO &amp; WERELD</a>
+        <a href="#markten">MARKTEN</a>
+        <a href="#innovatie">INNOVATIE</a>
+        <a href="#archief">ARCHIEF</a>
+      </nav>
     </div>
-    <nav class="nav" aria-label="Hoofdnavigatie">
-      <div class="container nav-inner">
-        <a href="#vandaag">Vandaag</a>
-        <a href="#markten">Markten</a>
-        <a href="#regio">Regio</a>
-        <a href="#archief">Archief</a>
-        <a href="#over">Over</a>
-      </div>
-    </nav>
+
+    <div class="edition">
+      <span class="day">VOORBEELDEDITIE</span>
+      <strong>5 SEPTEMBER 2026</strong>
+      <small>Jaargang 1 | Editie 248</small>
+      <div class="price"><b>€ 1,00</b><b>SRD 38,00</b></div>
+      <small>Paramaribo</small>
+    </div>
   </header>
 
+  <div class="progress-strip">
+    <b>SURINAME STAP VOORUIT</b>
+    <span>STABIELE ECONOMIE</span>
+    <span>STERKE SAMENLEVING</span>
+    <span>EEN DUURZAME TOEKOMST</span>
+  </div>
+
   <main>
-    <section class="hero container" id="vandaag">
-      <div class="hero-copy">
-        <p class="kicker">Laatste editie</p>
-        <h2>Financieel nieuws uit Suriname, Nederland en de regio</h2>
-        <p class="lead">Een overzichtelijke digitale krant met economie, wisselkoersen, grondstoffen, investeringen, vastgoed, reizen en regionaal nieuws.</p>
-        <div class="actions">
-          <a class="btn primary" href="edities/voorbeeld.html">Lees de editie</a>
-          <a class="btn" href="#archief">Bekijk archief</a>
+    <section class="lead-grid" id="economie">
+      <article class="lead lead-primary">
+        <div class="story-copy">
+          <span class="kicker">ECONOMIE</span>
+          <h2>Suriname start nieuwe fase in olie- en gasontwikkeling</h2>
+          <p class="deck">Meer zekerheid, meer kansen voor de economie</p>
+        </div>
+        <img src="assets/olie-gas.jpg" alt="Offshore olie- en gasplatform op zee">
+        <p>De Surinaamse overheid zet vaart achter de verdere ontwikkeling van de olie- en gassector. Nieuwe investeringen kunnen banen, lokale bedrijven en overheidsinkomsten versterken.</p>
+        <a class="readmore" href="#olie">Lees verder →</a>
+      </article>
+
+      <article class="lead">
+        <div class="story-copy">
+          <span class="kicker">INFRASTRUCTUUR</span>
+          <h2>Investeringen in betere infrastructuur en waterbeheer</h2>
+          <p class="deck">Nieuwe pompcapaciteit moet overlast beperken</p>
+        </div>
+        <img src="assets/waterbeheer.jpg" alt="Waterbeheer en pompinfrastructuur">
+        <p>Investeringen in waterbeheer en klimaatbestendige infrastructuur moeten woongebieden beter beschermen en de economische weerbaarheid vergroten.</p>
+        <a class="readmore" href="#water">Lees verder →</a>
+      </article>
+    </section>
+
+    <section class="three-stories">
+      <article>
+        <div class="num">3</div>
+        <img src="assets/veiligheid.jpg" alt="Politie en veiligheid">
+        <div><h3>Nationale veiligheidsaanpak: samen sterker tegen criminaliteit</h3><p>Focus op preventie, grensbewaking en cybercriminaliteit.</p></div>
+      </article>
+      <article>
+        <div class="num">4</div>
+        <img src="assets/landbouw.jpg" alt="Landbouwer op het veld">
+        <div><h3>Landbouwers krijgen uitgebreider bodemonderzoek</h3><p>Meer ondersteuning voor duurzame productie en opbrengsten.</p></div>
+      </article>
+      <article>
+        <div class="num">5</div>
+        <img src="assets/toerisme.jpg" alt="Toeristische accommodatie in Suriname">
+        <div><h3>Toerisme toont herstel met meer internationale bezoekers</h3><p>Kansen voor investeringen in verblijf, vervoer en recreatie.</p></div>
+      </article>
+    </section>
+
+    <section class="market-region-grid">
+      <div class="region" id="regio">
+        <header class="section-head blue">
+          <h2>REGIO &amp; WERELD</h2>
+          <span>Internationale ontwikkelingen met impact voor Suriname</span>
+        </header>
+        <div class="country-grid">
+          <article><h3>🇬🇾 GUYANA</h3><b>1</b><p>Olieproductie stijgt verder in 2026</p><small>Investeringen en exportcapaciteit blijven toenemen.</small></article>
+          <article><h3>🇮🇳 INDIA</h3><b>1</b><p>India en Cariben versterken economische banden</p><small>Nieuwe kansen in handel, IT en farmacie.</small></article>
+          <article><h3>🇫🇷 FRANS-GUYANA</h3><b>1</b><p>Nieuwe verbindingen en infrastructuur</p><small>Betere regionale bereikbaarheid en samenwerking.</small></article>
+          <article><h3>🇧🇷 BRAZILIË</h3><b>1</b><p>Investeringen in Noord-Brazilië</p><small>Infrastructuur en logistiek blijven groeien.</small></article>
+
+          <article><h3>🇬🇾 GUYANA</h3><b>2</b><p>Grensregio krijgt economische impuls</p><small>Meer handel en zakelijke samenwerking.</small></article>
+          <article><h3>🇮🇳 INDIA</h3><b>2</b><p>Groeiende vraag naar duurzame energie</p><small>Zonne-energie en opslag worden belangrijker.</small></article>
+          <article><h3>🇫🇷 FRANS-GUYANA</h3><b>2</b><p>Regionale samenwerking neemt toe</p><small>Meer aandacht voor grensoverschrijdende projecten.</small></article>
+          <article><h3>🇧🇷 BRAZILIË</h3><b>2</b><p>Handel met Caribisch gebied in beeld</p><small>Logistieke verbindingen bieden nieuwe kansen.</small></article>
         </div>
       </div>
-      <a class="edition-card" href="edities/voorbeeld.html" aria-label="Open de laatste editie">
-        <img src="assets/editie-voorbeeld.jpeg" alt="Voorbeeld van FINANCIEEL DAGBLAD WINN">
-      </a>
+
+      <aside class="markets" id="markten">
+        <section class="marketbox">
+          <header class="section-head green"><h2>SRD KOERSMONITOR</h2></header>
+          <div class="asof">Peildatum: voorbeeldeditie 5 sep 2026</div>
+          <table>
+            <thead><tr><th>Munt</th><th>Koers</th><th>1 dag</th><th>7 dagen</th></tr></thead>
+            <tbody>
+              <tr><td>USD/SRD</td><td>37,91</td><td class="down">+0,12</td><td class="down">+1,05%</td></tr>
+              <tr><td>EUR/SRD</td><td>44,09</td><td class="down">+0,18</td><td class="up">+0,41%</td></tr>
+              <tr><td>EUR/USD</td><td>1,1630</td><td class="down">+0,02</td><td class="up">+0,30%</td></tr>
+            </tbody>
+          </table>
+          <p class="analysis"><b>Analyse:</b> De SRD blijft gevoelig voor importvraag, internationale grondstoffenmarkten en monetair beleid.</p>
+        </section>
+
+        <section class="marketbox">
+          <header class="section-head green"><h2>GRONDSTOFFEN &amp; ENERGIE</h2></header>
+          <table>
+            <thead><tr><th>Product</th><th>Prijs</th><th>Trend</th></tr></thead>
+            <tbody>
+              <tr><td>Goud</td><td>4.468</td><td class="up">+2,1%</td></tr>
+              <tr><td>Olie Brent</td><td>96,06</td><td class="up">+4,5%</td></tr>
+              <tr><td>Olie WTI</td><td>92,10</td><td class="up">+4,8%</td></tr>
+              <tr><td>Bauxiet</td><td>58,00</td><td class="up">+1,8%</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </aside>
     </section>
 
-    <section class="section container" id="markten">
-      <div class="section-head">
-        <p class="kicker">Dashboard</p>
-        <h2>Markten & economie</h2>
-      </div>
-      <div class="cards">
-        <article class="card"><span class="label">EUR / SRD</span><strong>Dagkoers</strong><p>Vul hier per editie de actuele koers en bron in.</p></article>
-        <article class="card"><span class="label">Goud</span><strong>Grondstoffen</strong><p>Dag-, week- en maandontwikkeling overzichtelijk naast elkaar.</p></article>
-        <article class="card"><span class="label">Olie & gas</span><strong>Energie</strong><p>Belangrijkste prijsbewegingen en impact op Suriname.</p></article>
-        <article class="card"><span class="label">Investeringen</span><strong>Projecten</strong><p>Publieke en private projecten met financiële duiding.</p></article>
-      </div>
+    <section class="info-grid">
+      <article class="mini">
+        <header>TOP 3 KOOPWONINGEN</header>
+        <img src="assets/wonen.jpg" alt="Woningen in Suriname">
+        <ol><li>Kwatta</li><li>Zorg en Hoop</li><li>Rainville</li></ol>
+      </article>
+
+      <article class="mini">
+        <header>TOP 3 HOTELS PARAMARIBO</header>
+        <img src="assets/hotels.jpg" alt="Hotels in Paramaribo">
+        <ol><li>Torárica Resort</li><li>Courtyard by Marriott</li><li>Eco Resort Inn</li></ol>
+      </article>
+
+      <article class="mini">
+        <header>REIZEN NAAR PARAMARIBO</header>
+        <img src="assets/reizen.jpg" alt="Vliegtuig">
+        <p><b>KLM</b><br>Indicatieve retourprijzen</p>
+        <p><b>Surinam Airways</b><br>Indicatieve retourprijzen</p>
+      </article>
+
+      <article class="mini">
+        <header>ZONNEPANELEN</header>
+        <img src="assets/zonnepanelen.jpg" alt="Zonnepanelen">
+        <p><b>Klein huishouden</b><br>Indicatie: 6 panelen</p>
+        <p><b>Middelgroot systeem</b><br>Indicatie: 12 panelen</p>
+      </article>
+
+      <article class="mini">
+        <header>SURINAAMSE AANDELEN</header>
+        <table>
+          <tbody>
+            <tr><td>DSB</td><td>36,50</td><td class="up">+1,4%</td></tr>
+            <tr><td>FHB</td><td>22,00</td><td>0,0%</td></tr>
+            <tr><td>SPSB</td><td>9,80</td><td class="up">+2,1%</td></tr>
+            <tr><td>SURI</td><td>4,25</td><td class="down">-1,2%</td></tr>
+          </tbody>
+        </table>
+      </article>
     </section>
 
-    <section class="section alt" id="regio">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Regionaal</p>
-          <h2>Suriname en buurlanden</h2>
-        </div>
-        <div class="region-grid">
-          <article><h3>Suriname</h3><p>Economie, overheid, bedrijfsleven, vastgoed, energie en financieel beleid.</p></article>
-          <article><h3>Guyana</h3><p>Olie-economie, infrastructuur en zakelijke ontwikkelingen.</p></article>
-          <article><h3>Frans-Guyana</h3><p>Twee relevante nieuws- of analyse-items per editie.</p></article>
-          <article><h3>Brazilië & India</h3><p>Handel, technologie, investeringen en ontwikkelingen met regionale betekenis.</p></article>
-        </div>
-      </div>
+    <section class="bottom-grid" id="innovatie">
+      <article><img src="assets/medisch.jpg" alt=""><div><h3>MEDISCHE SECTOR</h3><p>Meer aandacht voor zorgcapaciteit en betaalbare toegang.</p></div></article>
+      <article><img src="assets/it.jpg" alt=""><div><h3>IT &amp; INNOVATIE</h3><p>Digitalisering helpt overheid, burgers en ondernemers sneller werken.</p></div></article>
+      <article><div class="legal-icon">§</div><div><h3>NIEUWE WETTEN &amp; BESLUITEN</h3><p>Compact overzicht van relevante economische en bestuurlijke wijzigingen.</p></div></article>
+      <article><img src="assets/investeringen.jpg" alt=""><div><h3>INVESTERINGSPROJECTEN</h3><p>Energie, logistiek, landbouw en infrastructuur in de pijplijn.</p></div></article>
     </section>
 
-    <section class="section container" id="archief">
-      <div class="section-head">
-        <p class="kicker">Archief</p>
-        <h2>Edities</h2>
-      </div>
-      <div class="archive-list">
-        <a href="edities/voorbeeld.html"><span>Voorbeeldeditie</span><span>Open →</span></a>
-      </div>
-      <p class="note">Nieuwe edities kunnen later eenvoudig als extra HTML-pagina of PDF worden toegevoegd.</p>
-    </section>
-
-    <section class="section about" id="over">
-      <div class="container narrow">
-        <p class="kicker">Over WINN</p>
-        <h2>Gemaakt voor goed leesbaar financieel nieuws</h2>
-        <p>De website is responsive opgebouwd: grote koppen, korte tekstblokken en duidelijke navigatie. Daardoor werkt hij zowel op computer als op mobiele telefoon.</p>
-      </div>
+    <section class="cta-row" id="archief">
+      <div><span class="cta-icon">⌂</span><p><b>Word abonnee</b><br>Ontvang de krant digitaal en op papier.</p></div>
+      <div><span class="cta-icon">◎</span><p><b>Bekijk het archief</b><br>Alle edities overzichtelijk op datum.</p></div>
+      <div><span class="cta-icon">✉</span><p><b>Tip de redactie</b><br>Deel een economisch onderwerp of project.</p></div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
+    <div>
       <strong>FINANCIEEL DAGBLAD WINN</strong>
-      <span>Paramaribo/ Amsterdam</span>
+      <span>De krant voor economie, ontwikkeling en welvaart</span>
+    </div>
+    <div class="footer-meta">
+      <span>Paramaribo</span>
+      <span>Digitaal &amp; print</span>
+      <span>© 2026 FINANCIEEL DAGBLAD WINN</span>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

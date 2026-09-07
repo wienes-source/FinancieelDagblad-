@@ -1,22 +1,13 @@
 # FINANCIEEL DAGBLAD WINN
 
-Responsieve basiswebsite voor het digitale Financieel Dagblad WINN.
+Professionele, responsive GitHub Pages-website voor FINANCIEEL DAGBLAD WINN.
 
-## Bestanden
-- `index.html` – homepage
-- `styles.css` – vormgeving
-- `script.js` – datumweergave
-- `edities/` – losse digitale edities
-- `assets/` – afbeeldingen
+## Publiceren
+1. Upload alle bestanden uit deze map naar de hoofdmap van de GitHub-repository.
+2. GitHub → Settings → Pages.
+3. Source: **Deploy from a branch**.
+4. Branch: **main**, folder: **/(root)**.
+5. Save.
 
-## GitHub Pages activeren
-1. Open de repository in GitHub.
-2. Ga naar **Settings** > **Pages**.
-3. Kies onder **Build and deployment**: **Deploy from a branch**.
-4. Selecteer branch **main** en map **/(root)**.
-5. Klik **Save**.
-
-Na enkele minuten verschijnt het openbare webadres op dezelfde Pages-pagina.
-
-## Strato koppelen
-Een eigen domein bij Strato kan later naar GitHub Pages worden gekoppeld via DNS en de optie **Custom domain** in GitHub Pages.
+## Belangrijk
+De website is mobielvriendelijk en gebruikt de voorpagina als visuele inspiratie. In de webversie staat als locatie alleen **Paramaribo** en zijn geen verwijzingen naar politieke partijen opgenomen.
