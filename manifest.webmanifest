@@ -3,7 +3,7 @@
   "short_name": "WINN",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#fbfbf8",
+  "background_color": "#fbfbf7",
   "theme_color": "#075c46",
   "icons": [
     {
