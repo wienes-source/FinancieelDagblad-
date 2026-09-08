@@ -5,9 +5,27 @@
     "location": "Paramaribo",
     "siteUrl": "",
     "contactEmail": "",
-    "currencyNotice": "Marktgegevens in deze demo zijn voorbeeldgegevens en worden later door actuele gegevens vervangen."
+    "currencyNotice": "Nieuws wordt dagelijks automatisch bijgewerkt. Marktkoersen worden in een volgende stap gekoppeld aan actuele databronnen."
   },
   "editions": [
+    {
+      "date": "2026-09-08",
+      "displayDate": "Dinsdag 8 september 2026",
+      "number": "Editie 249",
+      "year": "Jaargang 1",
+      "priceEur": "€ 1,00",
+      "priceSrd": "SRD 38,00",
+      "label": "Dagelijkse editie",
+      "summary": "Actueel financieel en economisch nieuws uit Suriname, Guyana, Frans-Guyana, Brazilië, India en de technologiesector.",
+      "articleIds": [
+        "2026-09-08-suriname-overzicht-wereldbank-laat-naast-hoge-inflatie-bescheiden-groe",
+        "2026-09-08-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+        "2026-09-08-front-runner-emerges-for-alluring-venus-fpso",
+        "2026-09-08-seaffinity-the-future-of-superyachts",
+        "2026-09-08-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+        "2026-09-08-hoe-organisaties-ai-omzetten-in-aantoonbare-bedrijfswaarde"
+      ]
+    },
     {
       "date": "2026-09-05",
       "displayDate": "Zaterdag 5 september 2026",
@@ -44,6 +62,108 @@
     }
   ],
   "articles": [
+    {
+      "id": "2026-09-08-suriname-overzicht-wereldbank-laat-naast-hoge-inflatie-bescheiden-groe",
+      "date": "2026-09-08",
+      "section": "Economie",
+      "category": "economie",
+      "title": "Suriname: Overzicht Wereldbank laat naast hoge inflatie bescheiden groei zien en lichte daling armoede zien",
+      "subtitle": "Actueel nieuws · bron: Vandaagenmorgen.nl",
+      "image": "assets/investeringen.jpg",
+      "lead": "Suriname: Overzicht Wereldbank laat naast hoge inflatie bescheiden groei zien en lichte daling armoede zien &nbsp;&nbsp; Vandaagenmorgen.nl",
+      "body": [
+        "Suriname: Overzicht Wereldbank laat naast hoge inflatie bescheiden groei zien en lichte daling armoede zien &nbsp;&nbsp; Vandaagenmorgen.nl",
+        "FINANCIEEL DAGBLAD WINN volgt deze ontwikkeling en actualiseert de berichtgeving wanneer nieuwe betrouwbare informatie beschikbaar komt."
+      ],
+      "source": "Vandaagenmorgen.nl",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOUmN1R2lLTktLSi1IQzFTOXFWUlJaY3IwbjdUc2NmOVdSSUdYd0JZQUZadlhybGJXZEtsWUlLRGdDQ2ZKOXRnLXNTNHFoOGZ6V0tLaFJtQl9QM2hPQzZoSF95R1JmQnFvWEZqWWJUZWc4T3U3V0lYczRvZ1FWTWU1c1FiOTNHYnZmZ3d4RExMUGhqSTRPWWhvUzNDLTNjY2VLMTUtTUJhenZPZG5vMGRmTEEtU2F1V1VVb21LOXZJVE9kWXVqTTFUMW5hMWwxSjFGc0M0TUpSUE9EWTJBWGVESXJOWlc?oc=5",
+      "featured": true
+    },
+    {
+      "id": "2026-09-08-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "date": "2026-09-08",
+      "section": "Energie",
+      "category": "economie",
+      "title": "Suriname rekent zich rijk na nieuwe olie- en gasvondst voor de kust",
+      "subtitle": "Actueel nieuws · bron: bnr.nl",
+      "image": "assets/olie-gas.jpg",
+      "lead": "Suriname rekent zich rijk na nieuwe olie- en gasvondst voor de kust &nbsp;&nbsp; bnr.nl",
+      "body": [
+        "Suriname rekent zich rijk na nieuwe olie- en gasvondst voor de kust &nbsp;&nbsp; bnr.nl",
+        "FINANCIEEL DAGBLAD WINN volgt deze ontwikkeling en actualiseert de berichtgeving wanneer nieuwe betrouwbare informatie beschikbaar komt."
+      ],
+      "source": "bnr.nl",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbXhiQkUyOVBuQVZrR250eTFQejFwaEZxSDFDWkNuZzdkUG9kVjY5RmFBWEVLdXhNMWlXelU5bVFST2haMGVzYXJCZFFTcEZMTklqUVdyVjJhMHA4N0tTTkxaaUE5ajd6azRyZFY2dXpNUEQ1R0FpdkxPaTc2ajNfSDFZUkFES203M3ZJUndMZnBLYXd6VFNuM3NsWUVGZml6ckJVR0F6TlRuVWhKMzdn?oc=5",
+      "featured": true
+    },
+    {
+      "id": "2026-09-08-front-runner-emerges-for-alluring-venus-fpso",
+      "date": "2026-09-08",
+      "section": "Guyana",
+      "category": "regio",
+      "title": "Front runner emerges for alluring Venus FPSO",
+      "subtitle": "Actueel nieuws · bron: Upstream Online",
+      "image": "assets/investeringen.jpg",
+      "lead": "Front runner emerges for alluring Venus FPSO &nbsp;&nbsp; Upstream Online",
+      "body": [
+        "Front runner emerges for alluring Venus FPSO &nbsp;&nbsp; Upstream Online",
+        "FINANCIEEL DAGBLAD WINN volgt deze ontwikkeling en actualiseert de berichtgeving wanneer nieuwe betrouwbare informatie beschikbaar komt."
+      ],
+      "source": "Upstream Online",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNckZLZHBtRDJ0a1JYZWpIYndERmdhU2lyLUpRS0c1YjdoUUx3WXNNemdpdGY2dloxRUU1bFVQSGNhYVhJc1R4ZEVEZHptU1IxcmgwYVJOeWhVWDAzWmQ5TENERnlhamNfMVpXb2FVQ0hSN0huM0hKaG1oSHJROUticm5zUjhMMUl1S2l5NF9IR1U2bEFkV3FQVmhDaENHMXdoWlJIeWlYSnA?oc=5",
+      "featured": false
+    },
+    {
+      "id": "2026-09-08-seaffinity-the-future-of-superyachts",
+      "date": "2026-09-08",
+      "section": "Frans-Guyana",
+      "category": "regio",
+      "title": "Seaffinity: the future of superyachts",
+      "subtitle": "Actueel nieuws · bron: Masters Expo",
+      "image": "assets/zonnepanelen.jpg",
+      "lead": "Seaffinity: the future of superyachts &nbsp;&nbsp; Masters Expo",
+      "body": [
+        "Seaffinity: the future of superyachts &nbsp;&nbsp; Masters Expo",
+        "FINANCIEEL DAGBLAD WINN volgt deze ontwikkeling en actualiseert de berichtgeving wanneer nieuwe betrouwbare informatie beschikbaar komt."
+      ],
+      "source": "Masters Expo",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8yMTc4WC1NQkllVnlDVTJsa29zb1lDZnF0SlQ1WkNGNGY0Tk9XNHZUVlBTbjdiX3Ftb1ctaGFxUzFnc2VRbk1seUctM2F1YnJwREhEb3I1a0ZPUnhwWVhPRFg3OUtrWTR4Zk9zZXZXV0RFUEk3?oc=5",
+      "featured": false
+    },
+    {
+      "id": "2026-09-08-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "date": "2026-09-08",
+      "section": "India",
+      "category": "regio",
+      "title": "Innovation engine under pressure: Tech- and platform ecosystem facing mounting challenges",
+      "subtitle": "Actueel nieuws · bron: PwC Nederland",
+      "image": "assets/it.jpg",
+      "lead": "Innovation engine under pressure: Tech- and platform ecosystem facing mounting challenges &nbsp;&nbsp; PwC Nederland",
+      "body": [
+        "Innovation engine under pressure: Tech- and platform ecosystem facing mounting challenges &nbsp;&nbsp; PwC Nederland",
+        "FINANCIEEL DAGBLAD WINN volgt deze ontwikkeling en actualiseert de berichtgeving wanneer nieuwe betrouwbare informatie beschikbaar komt."
+      ],
+      "source": "PwC Nederland",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTXo5UzF1Z3lDaXRzc3dKdlBIZWRtdmlZenB0VkFrTXRjdGVoOWF6dWVySkZmdU5IY2doWURQaEVQQUZLWE1HeUFxNERDWlJ2aGNLMXZFdmIyVGEtWERJQmk4SWUxMktHcDZYVDhqUjZmb3g4YUVld1paMk9Oa205WDFmY0NhSDNDTkh6SzZqcDNHR0dsdlQ3bUk4Y3dsUnZsX2E0SW5MSzJrWjV6U1J2YlFESHpXd19NVUFabVpmdS1tT0FUbC1TUEVZejZ3UQ?oc=5",
+      "featured": false
+    },
+    {
+      "id": "2026-09-08-hoe-organisaties-ai-omzetten-in-aantoonbare-bedrijfswaarde",
+      "date": "2026-09-08",
+      "section": "IT & Innovatie",
+      "category": "sectoren",
+      "title": "Hoe organisaties AI omzetten in aantoonbare bedrijfswaarde",
+      "subtitle": "Actueel nieuws · bron: dutchitleaders.nl",
+      "image": "assets/it.jpg",
+      "lead": "Hoe organisaties AI omzetten in aantoonbare bedrijfswaarde &nbsp;&nbsp; dutchitleaders.nl",
+      "body": [
+        "Hoe organisaties AI omzetten in aantoonbare bedrijfswaarde &nbsp;&nbsp; dutchitleaders.nl",
+        "FINANCIEEL DAGBLAD WINN volgt deze ontwikkeling en actualiseert de berichtgeving wanneer nieuwe betrouwbare informatie beschikbaar komt."
+      ],
+      "source": "dutchitleaders.nl",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUE5PX1Z2bk10czJSVGxRa015T2pNU01NWVJGZm85OHZJdWNVSldaLWFCQ2xDQXNnSG81Y09VaU5RbEphUzFtMVQxWFgzTjlrUEk5dkNwc3BsWGpVNTFPTVdFX3VyZFM0MVBRaGNuNFNOeXhYaWVGS3R5Y3h0REhVN0xn?oc=5",
+      "featured": false
+    },
     {
       "id": "olie-gas-ontwikkeling",
       "date": "2026-09-05",
