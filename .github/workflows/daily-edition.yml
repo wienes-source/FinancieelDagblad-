@@ -29,3 +29,4 @@ jobs:
 
       - name: Workflow gereed
         run: echo "Test succesvol uitgevoerd."un python scripts /update/content.py
+        
