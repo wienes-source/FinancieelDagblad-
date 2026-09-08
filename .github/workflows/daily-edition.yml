@@ -22,10 +22,10 @@ jobs:
           python-version: "3.12"
 
       - name: Dagelijkse editie uitvoeren
-        run: |
+        run: run python scripts/update/content.py
           echo "FINANCIEEL DAGBLAD WINN"
           echo "Dagelijkse workflow werkt."
           date
 
       - name: Workflow gereed
-        run: echo "Test succesvol uitgevoerd."
+        run: echo "Test succesvol uitgevoerd."un python scripts /update/content.py
