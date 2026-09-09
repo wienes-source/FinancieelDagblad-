@@ -8,7 +8,7 @@ function formatEditionDate(dateStr){
   return new Intl.DateTimeFormat('nl-NL',{day:'numeric',month:'long',year:'numeric'}).format(new Date(dateStr+'T12:00:00'));
 }
 function esc(value = '') {
-  return String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  return String(value ?? '').replace(/&nbsp;/g, ' ' ).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 }
 function articleLink(article) {
   return `artikel.html?id=${encodeURIComponent(article.id)}`;
@@ -28,7 +28,7 @@ function renderHomepage(articles) {
   if (!lead) return;
   lead.innerHTML = articles.slice(0,2).map((a,i) => `
     <article class="lead${i === 0 ? ' lead-primary' : ''}"${i === 0 ? ' id="heroArticle"' : ''}>
-      <div class="story-copy"><span class="kicker">${esc(a.section)}</span>
+      <div class="story-copy"><span class="headline-label">HOOFDNIEUWS ${i+1}</span><span class="kicker">${esc(a.section)}</span>
       <h2>${esc(a.title)}</h2><p class="deck">${esc(a.subtitle)}</p></div>
       <img src="${articleImage(a)}" alt=""><p>${esc(a.lead)}</p>
       <a class="readmore" href="${articleLink(a)}">Lees het volledige artikel →</a>

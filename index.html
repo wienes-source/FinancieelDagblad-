@@ -26,8 +26,9 @@
       <span class="green"></span><span class="red"></span><span class="green"></span>
     </div>
     <div class="brand">
+      <div class="brand-promise">ACTUEEL · BETROUWBAAR · ONAFHANKELIJK · REGIONAAL · INTERNATIONAAL</div>
       <h1><span>FINANCIEEL DAGBLAD</span> <strong>WINN</strong></h1>
-      <p>DE KRANT VOOR ECONOMIE, ONTWIKKELING EN WELVAART</p>
+      <p>DAGELIJKS NIEUWS, ANALYSE EN KANSEN VOOR SURINAME</p>
       <nav aria-label="Hoofdmenu">
         <a href="#nieuws">NIEUWS</a>
         <a href="#regio">REGIO &amp; WERELD</a>
@@ -42,12 +43,11 @@
     </div>
   </header>
 
-  <div class="progress-strip">
-    <b>SURINAME STAP VOORUIT</b>
-    <span>STABIELE ECONOMIE</span>
-    <span>STERKE SAMENLEVING</span>
-    <span>EEN DUURZAME TOEKOMST</span>
-  </div>
+  <nav class="topic-strip" aria-label="Onderwerpen">
+    <a href="#sectoren">ENERGIE</a><a href="#regio">HANDEL</a><a href="#sectoren">INVESTERINGEN</a>
+    <a href="#sectoren">LANDBOUW</a><a href="#sectoren">TECHNOLOGIE</a><a href="#sectoren">GEZONDHEID</a>
+    <a href="#koopwijzer">TOERISME</a><a href="#koopwijzer">WONEN</a><a href="#regio">INTERNATIONAAL</a>
+  </nav>
 
   <main>
     <section class="search-panel">
@@ -63,11 +63,13 @@
 
     <div id="searchResults" class="search-results" hidden></div>
 
+    <div class="frontpage-news">
     <section class="lead-grid" id="nieuws">
       <p role="status">De nieuwste artikelen worden geladen…</p>
     </section>
 
-    <section class="three-stories" id="secondaryArticles"></section>
+    <section class="three-stories" id="secondaryArticles" aria-label="Meer hoofdnieuws"></section>
+    </div>
 
     <section class="market-region-grid">
       <div class="region" id="regio">
@@ -78,72 +80,19 @@
         <div class="country-grid" id="regionArticles"></div>
       </div>
 
-      <aside class="markets" id="markten">
-        <section class="marketbox">
-          <header class="section-head green"><h2>SRD KOERSMONITOR</h2></header>
-          <div class="asof">Voorbeeldcijfers uit editie 5 september 2026</div>
-          <table>
-            <thead><tr><th>Munt</th><th>Koers</th><th>1 dag</th><th>7 dagen</th></tr></thead>
-            <tbody>
-              <tr><td>USD/SRD</td><td>37,91</td><td class="down">+0,12</td><td class="down">+1,05%</td></tr>
-              <tr><td>EUR/SRD</td><td>44,09</td><td class="down">+0,18</td><td class="up">+0,41%</td></tr>
-              <tr><td>EUR/USD</td><td>1,1630</td><td class="down">+0,02</td><td class="up">+0,30%</td></tr>
-            </tbody>
-          </table>
-          <p class="analysis"><b>Analyse:</b> De SRD blijft gevoelig voor importvraag, internationale grondstoffenmarkten en monetair beleid.</p>
-        </section>
-        <section class="marketbox">
-          <header class="section-head green"><h2>GRONDSTOFFEN &amp; ENERGIE</h2></header>
-          <table>
-            <thead><tr><th>Product</th><th>Prijs</th><th>Trend</th></tr></thead>
-            <tbody>
-              <tr><td>Goud</td><td>4.468</td><td class="up">+2,1%</td></tr>
-              <tr><td>Olie Brent</td><td>96,06</td><td class="up">+4,5%</td></tr>
-              <tr><td>Olie WTI</td><td>92,10</td><td class="up">+4,8%</td></tr>
-              <tr><td>Bauxiet</td><td>58,00</td><td class="up">+1,8%</td></tr>
-            </tbody>
-          </table>
-        </section>
-      </aside>
+      <aside class="markets" id="markten"><article class="reference-card"><h3>SRD KOERSMONITOR</h3><div class="table-scroll" role="region" aria-label="SRD KOERSMONITOR" tabindex="0"><table><thead><tr><th scope="col">Munt</th><th scope="col">CBvS</th><th scope="col">Markt¹</th><th scope="col">1 dag</th><th scope="col">7 dagen</th><th scope="col">1 maand</th></tr></thead><tbody><tr><td>USD</td><td>36,50</td><td>37,90</td><td>+0,1%</td><td>+1,2%</td><td>+2,8%</td></tr><tr><td>EUR</td><td>42,10</td><td>43,85</td><td>+0,2%</td><td>+1,5%</td><td>+3,4%</td></tr><tr><td>EUR/USD</td><td>1,154</td><td>1,156</td><td>+0,1%</td><td>+0,3%</td><td>+0,8%</td></tr></tbody></table></div><p class="source-note">Voorbeeld uit aangeleverde krant · peildatum 8 september 2026. ¹ Marktindicatie. Bronvermelding in voorbeeld: Centrale Bank van Suriname en cambiomarkt. Geen live koersen.</p></article></aside>
     </section>
 
-    <section class="info-grid" id="sectoren">
-      <article class="mini">
-        <header>TOP 3 KOOPWONINGEN</header>
-        <img src="assets/wonen.jpg" alt="Woningen in Suriname">
-        <ol><li>Kwatta</li><li>Zorg en Hoop</li><li>Rainville</li></ol>
-      </article>
-      <article class="mini">
-        <header>TOP 3 HOTELS PARAMARIBO</header>
-        <img src="assets/hotels.jpg" alt="Hotels in Paramaribo">
-        <ol><li>Torárica Resort</li><li>Courtyard by Marriott</li><li>Eco Resort Inn</li></ol>
-      </article>
-      <article class="mini">
-        <header>REIZEN NAAR PARAMARIBO</header>
-        <img src="assets/reizen.jpg" alt="Vliegtuig">
-        <p><b>KLM</b><br>Indicatieve retourprijzen</p>
-        <p><b>Surinam Airways</b><br>Indicatieve retourprijzen</p>
-      </article>
-      <article class="mini">
-        <header>ZONNEPANELEN</header>
-        <img src="assets/zonnepanelen.jpg" alt="Zonnepanelen">
-        <p><b>Klein huishouden</b><br>Indicatie: 6 panelen</p>
-        <p><b>Middelgroot systeem</b><br>Indicatie: 12 panelen</p>
-      </article>
-      <article class="mini">
-        <header>SURINAAMSE AANDELEN</header>
-        <table>
-          <tbody>
-            <tr><td>DSB</td><td>36,50</td><td class="up">+1,4%</td></tr>
-            <tr><td>FHB</td><td>22,00</td><td>0,0%</td></tr>
-            <tr><td>SPSB</td><td>9,80</td><td class="up">+2,1%</td></tr>
-            <tr><td>SURI</td><td>4,25</td><td class="down">-1,2%</td></tr>
-          </tbody>
-        </table>
-      </article>
+    <section class="reference-intro" aria-labelledby="referenceTitle">
+      <h2 id="referenceTitle">Financieel overzicht &amp; koopwijzer</h2>
+      <p>Uit het aangeleverde krantvoorbeeld van 9 september 2026. Deze tabellen en prijsindicaties verversen niet automatisch; het nieuws bovenaan wel.</p>
     </section>
-
-    <section class="bottom-grid" id="sectorArticles"></section>
+    <section class="reference-grid" aria-label="Financiële tabellen"><article class="reference-card"><h3>GRONDSTOFFEN &amp; ENERGIE</h3><div class="table-scroll" role="region" aria-label="GRONDSTOFFEN &amp; ENERGIE" tabindex="0"><table><thead><tr><th scope="col">Product</th><th scope="col">Prijs</th><th scope="col">Eenheid</th></tr></thead><tbody><tr><td>Goud (wereld)</td><td>4.403</td><td>USD/oz</td></tr><tr><td>Goud (wereld)</td><td>141,6</td><td>USD/gram</td></tr><tr><td>Goud (Suriname)</td><td>165–175</td><td>USD/gram</td></tr><tr><td>Brent olie</td><td>67,92</td><td>USD/vat</td></tr><tr><td>WTI olie</td><td>64,34</td><td>USD/vat</td></tr><tr><td>Bauxiet (CIF)</td><td>55–60</td><td>USD/ton</td></tr><tr><td>Aardgas (TTF)</td><td>33,10</td><td>EUR/MWh</td></tr></tbody></table></div><p class="source-note">Voorbeeld · 9 september 2026. Genoemde bronnen: Kitco, lokale dealers, ICE, NYMEX en Fastmarkets.</p></article><article class="reference-card"><h3>SURINAAMSE AANDELEN</h3><div class="table-scroll" role="region" aria-label="SURINAAMSE AANDELEN" tabindex="0"><table><thead><tr><th scope="col">Bedrijf</th><th scope="col">Laatste</th><th scope="col">7 dagen</th></tr></thead><tbody><tr><td>DSB</td><td>12,50</td><td>0%</td></tr><tr><td>Hakrinbank</td><td>320,00</td><td>+1,6%</td></tr><tr><td>Finabank</td><td>20,50</td><td>0%</td></tr><tr><td>Suralco</td><td>48,00</td><td>+2,1%</td></tr><tr><td>Kuldipsingh</td><td>12,75</td><td>0%</td></tr></tbody></table></div><p class="source-note">Voorbeeld · 8 september 2026. Genoemde bron: Suriname Stock Exchange. Niet alle fondsen dagelijks verhandeld.</p></article><article class="reference-card"><h3>SCHULD SURINAME</h3><div class="table-scroll" role="region" aria-label="SCHULD SURINAME" tabindex="0"><table><thead><tr><th scope="col">Indicator</th><th scope="col">Stand</th></tr></thead><tbody><tr><td>Totale overheidsschuld</td><td>17,5 mld USD</td></tr><tr><td>t.o.v. 15 mei 2025</td><td>+1,8 mld USD</td></tr><tr><td>Verschil</td><td>+11,5%</td></tr><tr><td>Schuldquote BBP</td><td>87,4%</td></tr></tbody></table></div><p class="source-note">Overgenomen voorbeeldcijfers · juni 2026. Genoemde bron: Ministerie van Financiën. Niet onafhankelijk gecontroleerd.</p></article><article class="reference-card"><h3>NIEUWE WETTEN &amp; BESLUITEN</h3><div class="table-scroll" role="region" aria-label="NIEUWE WETTEN &amp; BESLUITEN" tabindex="0"><table><thead><tr><th scope="col">Datum</th><th scope="col">Onderwerp</th></tr></thead><tbody><tr><td>8 sep 2026</td><td>Concept wijziging milieuwet ter consultatie</td></tr><tr><td>8 sep 2026</td><td>Nieuwe richtlijnen digitale overheid</td></tr><tr><td>8 sep 2026</td><td>Aanpassing importheffingen bepaalde goederen</td></tr></tbody></table></div><p class="source-note">Voorbeeldrubriek, geen bevestiging van geldend recht. Genoemde bron: Staatsblad van de Republiek Suriname.</p></article></section>
+    <section id="sectoren" class="sector-section" aria-labelledby="sectorTitle"><h2 id="sectorTitle" class="section-title">SECTOREN &amp; ONTWIKKELING</h2>
+      <div class="bottom-grid" id="sectorArticles"></div>
+      <div class="solar-panel"><article class="reference-card"><h3>ZONNEPANELEN</h3><img class="reference-image" src="assets/zonnepanelen.jpg" alt="Zonnepanelen"><div class="table-scroll" role="region" aria-label="ZONNEPANELEN" tabindex="0"><table><thead><tr><th scope="col">Systeem</th><th scope="col">Indicatieprijs</th><th scope="col">Inclusief</th></tr></thead><tbody><tr><td>Klein 3 kWp</td><td>€ 2.400</td><td>Panelen, omvormer, installatie</td></tr><tr><td>Middel 5 kWp</td><td>€ 3.750</td><td>Panelen, omvormer, installatie</td></tr></tbody></table></div><p class="source-note">Voorbeeld · september 2026. Prijzen afhankelijk van merk en aanbieder; geen actuele offerte.</p></article><div class="sector-message"><h3>Investeren in vandaag, voor een sterker Suriname</h3><p>Volg de ontwikkelingen in zorg, digitalisering, energie en investeringsprojecten in de nieuwste dagelijkse editie.</p><a href="#nieuws">Naar het hoofdnieuws →</a></div></div>
+    </section>
+    <section class="reference-grid shopping-grid" id="koopwijzer" aria-label="Koopwijzer"><article class="reference-card shopping-card"><h3>TOP 3 KOOPWONINGEN</h3><img class="reference-image" src="assets/wonen.jpg" alt=""><ol><li><b>Paramaribo Noord</b><span>Vrijstaande woning</span><strong>€ 275.000</strong></li><li><b>Kwatta</b><span>Tussenwoning</span><strong>€ 145.000</strong></li><li><b>Welgelegen</b><span>Appartement</span><strong>€ 210.000</strong></li></ol><p class="source-note">Voorbeelden uit de krant van 9 september 2026. Vraagprijzen zijn geen gerealiseerde verkoopprijzen.</p></article><article class="reference-card shopping-card"><h3>TOP 3 HOTELS PARAMARIBO</h3><img class="reference-image" src="assets/hotels.jpg" alt=""><ol><li><b>Torárica Resort</b><span>15 sep / 22 sep</span><strong>vanaf € 150 / € 160</strong></li><li><b>Eco Resort Inn</b><span>15 sep / 22 sep</span><strong>vanaf € 90 / € 95</strong></li><li><b>Courtyard Marriott</b><span>15 sep / 22 sep</span><strong>vanaf € 175 / € 180</strong></li></ol><p class="source-note">Voorbeeldprijzen per nacht, 2026; incl. belastingen, excl. beschikbaarheid. Genoemde bron: Booking.com.</p></article><article class="reference-card shopping-card"><h3>TOP 3 eVTOL PASSAGIERSDRONES</h3><ol><li><b>EHang EH216 S</b><span>2 personen · bereik 30 km</span><strong>€ 410.000</strong></li><li><b>Joby S4</b><span>4 personen · bereik 160 km</span><strong>€ 4,0 mln</strong></li><li><b>Lilium Jet</b><span>5 personen · bereik 250 km</span><strong>Prijs op aanvraag</strong></li></ol><p class="source-note">Conceptvergelijking uit het voorbeeld van 9 september 2026. Prijzen, beschikbaarheid, certificering en lokale toelating te verifiëren.</p></article><article class="reference-card shopping-card"><h3>TOP 3 LUXE AUTO’S</h3><ol><li><b>Mercedes Benz S 500</b><span>2023</span><strong>€ 185.000</strong></li><li><b>BMW X7 xDrive40i</b><span>2022</span><strong>€ 145.000</strong></li><li><b>Range Rover Autobiography</b><span>2022</span><strong>€ 195.000</strong></li></ol><p class="source-note">Voorbeeldvraagprijzen · 9 september 2026. Genoemde bronnen: lokale dealers en online platforms.</p></article></section>
 
     <section class="cta-row">
       <div><span class="cta-icon">⌂</span><p><b>Mobiel lezen</b><br>Geoptimaliseerd voor telefoon en tablet.</p></div>

@@ -350,3 +350,73 @@ footer>div>span{font-size:11px}
   #editionCard .edition-button{grid-column:2;grid-row:3;justify-self:stretch;text-align:center}
 }
 #editionCard .price b + b{font-size:10px;font-weight:500}
+
+/* Newspaper hierarchy and reference tables from the supplied print example. */
+.brand-promise{text-align:center;color:var(--blue);font-size:10px;letter-spacing:.8px;font-weight:800;margin-bottom:8px}
+.topic-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:0;background:#eee8d9;border-block:1px solid #dfd6c1;padding:5px}
+.topic-strip a{padding:7px 12px;color:#164438;font-size:11px;font-weight:900;text-decoration:none}
+.topic-strip a:hover{text-decoration:underline}
+.frontpage-news{display:grid;grid-template-columns:minmax(0,4fr) minmax(190px,1fr);gap:12px}
+.frontpage-news .lead-grid{grid-template-columns:1.35fr 1fr}
+.headline-label{display:table;background:var(--red);color:#fff;font-size:12px;font-weight:900;padding:4px 8px;margin-bottom:6px;border-radius:3px}
+.frontpage-news .kicker{display:block;margin-bottom:5px}
+.frontpage-news .lead h2{font-size:clamp(25px,2.6vw,39px);line-height:1.06}
+.frontpage-news .lead img{aspect-ratio:1.6}
+.frontpage-news .deck{font-size:16px;line-height:1.2}
+.frontpage-news .three-stories{grid-template-columns:1fr;align-content:start;gap:10px;padding:0;border:0}
+.frontpage-news .three-stories article{grid-template-columns:28px minmax(0,1fr);border:1px solid #ccd8d3;border-radius:4px;padding:9px;background:#f4f8f6}
+.frontpage-news .three-stories img{display:none}
+.frontpage-news .three-stories .num{font-size:17px;padding:4px 0}
+.frontpage-news .three-stories h3{font-size:19px;line-height:1.13}
+.frontpage-news .three-stories p{font-size:11px;line-height:1.4}
+.reference-intro{border-top:3px solid var(--green);margin-top:14px;padding:10px 0}
+.reference-intro h2{font-family:Georgia,serif;font-size:23px;margin:0 0 4px;color:var(--blue)}
+.reference-intro p{font-size:12px;line-height:1.5;margin:0;color:#43594e}
+.reference-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0}
+.reference-card{min-width:0;border:1px solid #bbcec5;border-radius:5px;overflow:hidden;background:#f8fbf9}
+.reference-card h3{background:var(--green);color:white;font-size:15px;line-height:1.2;margin:0;padding:8px}
+.reference-card .table-scroll{overflow-x:auto}
+.reference-card th{background:#e8eeeb;color:#213d31;font-size:11px}
+.reference-card td{font-size:12px;vertical-align:top;line-height:1.4}
+.reference-card tr:nth-child(even){background:#eff4f1}
+.reference-card .source-note{font-size:10px;line-height:1.5;color:#4d6057;margin:8px}
+.markets{align-content:start;min-width:0}
+.markets .reference-card h3{font-size:22px}
+.reference-image{display:block;width:100%;height:130px;object-fit:cover}
+.section-title{background:var(--green);color:#fff;font-size:17px;padding:8px;margin:14px 0 0;border-radius:4px}
+.solar-panel{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.sector-message{background:linear-gradient(120deg,#064b3b,#087e60);color:#fff;border-radius:5px;padding:24px;display:flex;flex-direction:column;justify-content:center}
+.sector-message h3{font-family:Georgia,serif;font-style:italic;color:#f4d678;font-size:28px;line-height:1.2;margin:0 0 12px}
+.sector-message p{font-size:14px;line-height:1.5}
+.sector-message a{color:#fff;font-weight:800}
+.shopping-card h3{background:#9a740c}
+.shopping-card ol{padding:0 12px 0 30px;margin:6px 0}
+.shopping-card li{padding:10px 0;border-bottom:1px solid #d8e1dc;font-size:13px;line-height:1.4}
+.shopping-card li span,.shopping-card li strong{display:block;margin-top:3px}
+.shopping-card li span{font-size:11px;color:#52645c}
+@media(max-width:1000px){
+ .frontpage-news{grid-template-columns:1fr}
+ .frontpage-news .three-stories{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ .brand-promise{font-size:8px;letter-spacing:.2px;line-height:1.4}
+ .topic-strip{justify-content:flex-start}
+ .topic-strip a{font-size:10px;padding:7px 8px}
+ .frontpage-news .lead-grid,.frontpage-news .three-stories{grid-template-columns:1fr}
+ .frontpage-news .lead h2{font-size:30px}
+ .reference-grid,.solar-panel{grid-template-columns:1fr}
+ .reference-card td{font-size:12px}
+ .reference-image{height:170px}
+ .sector-message{padding:20px}
+}
+/* Some legacy assets contain printed text instead of a standalone photograph. */
+.frontpage-news img[src="assets/investeringen.jpg"],
+.bottom-grid img[src="assets/investeringen.jpg"],
+.bottom-grid img[src="assets/medisch.jpg"],
+.bottom-grid img[src="assets/it.jpg"],
+.reference-image[src="assets/zonnepanelen.jpg"]{display:none}
+.bottom-grid article:has(img[src="assets/investeringen.jpg"]),
+.bottom-grid article:has(img[src="assets/medisch.jpg"]),
+.bottom-grid article:has(img[src="assets/it.jpg"]){grid-template-columns:1fr}
+.country-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
