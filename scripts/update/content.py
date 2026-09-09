@@ -74,7 +74,7 @@ def main():
         raise RuntimeError("Geen actuele artikelen opgehaald")
     previous = [edition for edition in editions if edition.get("date") != today]
     numbers = [int(match.group(1)) for edition in previous for match in [re.search(r"(\d+)", edition.get("number", ""))] if match]
-    edition = {"date": today, "displayDate": dutch_date(now), "number": f"Editie {max(numbers, default=0) + 1}", "year": "Jaargang 1", "priceEur": "€ 1,00", "priceSrd": "SRD 38,00", "label": "Dagelijkse editie", "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.", "articleIds": [article["id"] for article in fresh]}
+    edition = {"date": today, "displayDate": dutch_date(now), "number": f"Editie {max(numbers, default=0) + 1}", "year": "Jaargang 1", "priceEur": "€ 4,80", "priceSrd": "SRD 38,00", "label": "Dagelijkse editie", "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.", "articleIds": [article["id"] for article in fresh]}
     write_json(ARTICLES_FILE, fresh + [article for article in articles if article.get("date") != today])
     write_json(EDITIONS_FILE, [edition] + previous)
     print("Nieuwe editie:", edition["displayDate"], f"({len(fresh)} artikelen)")
