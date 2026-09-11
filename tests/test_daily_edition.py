@@ -18,7 +18,7 @@ class DailyEditionTest(unittest.TestCase):
             editions.write_text('[]')
             def fake(query, section, image, today):
                 return {'id': today + '-' + content.slug(section), 'date': today, 'title': query}
-            with patch.object(content, 'ARTICLES_FILE', articles), patch.object(content, 'EDITIONS_FILE', editions), patch.object(content, 'fetch_article', side_effect=fake):
+            with patch.object(content, 'fetch_exchange_rate', return_value={'date': '2026-09-10', 'base': 'EUR', 'quote': 'SRD', 'rate': 43.8575}), patch.object(content, 'ARTICLES_FILE', articles), patch.object(content, 'EDITIONS_FILE', editions), patch.object(content, 'fetch_article', side_effect=fake):
                 content.main()
                 first = json.loads(editions.read_text())
                 content.main()

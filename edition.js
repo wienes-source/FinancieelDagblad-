@@ -4,13 +4,14 @@ async function getJSON(path){ const r=await fetch(path); if(!r.ok) throw new Err
   const date=new URLSearchParams(location.search).get('date');
   try{
     const [editions,articles]=await Promise.all([getJSON('data/editions.json'),getJSON('data/articles.json')]);
+    const price=await WINN_PRICE.load();
     const e=editions.find(x=>x.date===date) || editions.slice().sort((a,b)=>b.date.localeCompare(a.date))[0];
     document.title=`${e.displayDate} | FINANCIEEL DAGBLAD WINN`;
     document.getElementById('editionHeader').innerHTML=`
       <span class="eyebrow">${e.label}</span>
       <h2>${e.displayDate}</h2>
       <p><b>${e.year} · ${e.number}</b><br>${e.summary}</p>
-      <div class="edition-meta"><span>${e.priceEur}</span><span>${e.priceSrd}</span><span>Paramaribo</span></div>`;
+      <p class="exchange-rate-note">${price.note}</p><div class="edition-meta"><span>${e.priceEur}</span><span>${price.label}</span><span>Paramaribo</span></div>`;
     const selected=e.articleIds.map(id=>articles.find(a=>a.id===id)).filter(Boolean);
     document.getElementById('editionArticles').innerHTML=selected.length?selected.map(a=>`
       <article class="edition-article-card">

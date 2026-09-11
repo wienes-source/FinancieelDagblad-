@@ -420,3 +420,6 @@ footer>div>span{font-size:11px}
 .bottom-grid article:has(img[src="assets/medisch.jpg"]),
 .bottom-grid article:has(img[src="assets/it.jpg"]){grid-template-columns:1fr}
 .country-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+
+#editionCard .exchange-rate-note{font-size:9px;margin:3px 0 5px;grid-column:1/-1}
+.exchange-rate-note{font-size:11px;line-height:1.4}

@@ -4,8 +4,9 @@ import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, date
 from pathlib import Path
+from decimal import Decimal, ROUND_CEILING
 from zoneinfo import ZoneInfo
 
 ARTICLES_FILE = Path("data/articles.json")
@@ -58,6 +59,21 @@ def write_json(path, value):
         json.dump(value, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
 
+def fetch_exchange_rate():
+    url = "https://api.frankfurter.dev/v2/providers/cbvs/rate/eur/srd"
+    request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 WINN/1.0", "Accept": "application/json"})
+    with urllib.request.urlopen(request, timeout=15) as response:
+        rate = json.load(response)
+    age = (datetime.now(TZ).date() - date.fromisoformat(rate["date"])).days
+    value = Decimal(str(rate["rate"]))
+    if rate.get("base") != "EUR" or rate.get("quote") != "SRD" or not value.is_finite() or value <= 0 or not 0 <= age <= 7:
+        raise ValueError("Geen recente EUR/SRD-koers")
+    return rate
+
+def edition_price(rate):
+    amount = (Decimal("4.80") * Decimal(str(rate["rate"]))).to_integral_value(rounding=ROUND_CEILING)
+    return f"SRD {amount}"
+
 def main():
     articles, editions = read_json(ARTICLES_FILE), read_json(EDITIONS_FILE)
     now = datetime.now(TZ)
@@ -72,9 +88,14 @@ def main():
             print("Kon feed niet ophalen:", query, exc)
     if not fresh:
         raise RuntimeError("Geen actuele artikelen opgehaald")
+    try:
+        exchange_rate = fetch_exchange_rate()
+    except Exception as exc:
+        print("Dagkoers niet beschikbaar:", exc)
+        exchange_rate = None
     previous = [edition for edition in editions if edition.get("date") != today]
     numbers = [int(match.group(1)) for edition in previous for match in [re.search(r"(\d+)", edition.get("number", ""))] if match]
-    edition = {"date": today, "displayDate": dutch_date(now), "number": f"Editie {max(numbers, default=0) + 1}", "year": "Jaargang 1", "priceEur": "€ 4,80", "priceSrd": "SRD 38,00", "label": "Dagelijkse editie", "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.", "articleIds": [article["id"] for article in fresh]}
+    edition = {"date": today, "displayDate": dutch_date(now), "number": f"Editie {max(numbers, default=0) + 1}", "year": "Jaargang 1", "priceEur": "€ 4,80", "priceSrd": edition_price(exchange_rate) if exchange_rate else "SRD niet beschikbaar", "exchangeRate": exchange_rate, "label": "Dagelijkse editie", "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.", "articleIds": [article["id"] for article in fresh]}
     write_json(ARTICLES_FILE, fresh + [article for article in articles if article.get("date") != today])
     write_json(EDITIONS_FILE, [edition] + previous)
     print("Nieuwe editie:", edition["displayDate"], f"({len(fresh)} artikelen)")

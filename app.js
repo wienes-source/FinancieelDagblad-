@@ -50,10 +50,12 @@ async function initEdition(){
   try {
     const [editions, articles] = await Promise.all([getJSON('data/editions.json'), getJSON('data/articles.json')]);
     const {edition:e, selected} = selectEdition(editions, articles);
+    const price = await WINN_PRICE.load();
     if (card) card.innerHTML = `
       <span class="day">LAATSTE EDITIE</span><strong>${esc(e.displayDate || formatEditionDate(e.date))}</strong>
       <small>${esc(e.year)} | ${esc(e.number)}</small>
-      <div class="price"><b>${esc(e.priceEur)}</b><b>${esc(e.priceSrd)}</b></div>
+      <div class="price" title="${esc(price.note)}"><b>${esc(e.priceEur)}</b><b>${esc(price.label)}</b></div>
+      <small class="exchange-rate-note">${esc(price.rate ? "Koersdatum: " + price.rate.date : price.note)}</small>
       <a class="edition-button" href="editie.html?date=${encodeURIComponent(e.date)}">Open editie</a>`;
     renderHomepage(selected);
   } catch(err) {
