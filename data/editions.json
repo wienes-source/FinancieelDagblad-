@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-09-15",
+    "displayDate": "Dinsdag 15 september 2026",
+    "number": "Editie 256",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 210",
+    "exchangeRate": {
+      "date": "2026-09-14",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 43.6685
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-09-15-suriname-haalt-meer-dan-helft-van-dienstenexport-uit-digitale-dienstve",
+      "2026-09-15-richard-de-mos-wil-snel-haagse-handelsmissie-naar-suriname",
+      "2026-09-15-nyt-venezuela-navy-interrupts-oil-exploration-off-guyana",
+      "2026-09-15-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "2026-09-15-dieptepunt-voor-gezondheidszorg-in-suriname",
+      "2026-09-15-hoe-organisaties-ai-omzetten-in-aantoonbare-bedrijfswaarde",
+      "2026-09-15-major-projects-in-china-s-15th-five-year-plan-open-up-new-job-opportun"
+    ]
+  },
+  {
     "date": "2026-09-14",
     "displayDate": "Maandag 14 september 2026",
     "number": "Editie 255",
