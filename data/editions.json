@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-09-16",
+    "displayDate": "Woensdag 16 september 2026",
+    "number": "Editie 257",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 210",
+    "exchangeRate": {
+      "date": "2026-09-15",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 43.6805
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-09-16-debipersad-olie-inkomsten-mogen-surinaamse-economie-niet-uit-balans-br",
+      "2026-09-16-richard-de-mos-wil-snel-haagse-handelsmissie-naar-suriname",
+      "2026-09-16-nyt-venezuela-navy-interrupts-oil-exploration-off-guyana",
+      "2026-09-16-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "2026-09-16-dieptepunt-voor-gezondheidszorg-in-suriname",
+      "2026-09-16-slimme-zalen-en-strikte-guardrails-de-nieuwe-realiteit-van-it-en-ai",
+      "2026-09-16-digitaal-havensysteem-voor-suriname-voor-95-procent-gereed"
+    ]
+  },
+  {
     "date": "2026-09-15",
     "displayDate": "Dinsdag 15 september 2026",
     "number": "Editie 256",
