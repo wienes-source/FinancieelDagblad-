@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-09-18",
+    "displayDate": "Vrijdag 18 september 2026",
+    "number": "Editie 259",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 210",
+    "exchangeRate": {
+      "date": "2026-09-17",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 43.6585
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-09-18-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-09-18-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-09-18-nyt-venezuela-navy-interrupts-oil-exploration-off-guyana",
+      "2026-09-18-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "2026-09-18-herman-jintie-hulp-nodig-voor-zorg-in-surinaamse-binnenland",
+      "2026-09-18-62-nederlandse-finance-professionals-ziet-overinvestering-in-ai-tools",
+      "2026-09-18-suriname-receives-grant-for-flood-protection-systems"
+    ]
+  },
+  {
     "date": "2026-09-17",
     "displayDate": "Donderdag 17 september 2026",
     "number": "Editie 258",
