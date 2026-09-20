@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-09-20",
+    "displayDate": "Zondag 20 september 2026",
+    "number": "Editie 261",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 209",
+    "exchangeRate": {
+      "date": "2026-09-18",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 43.4545
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-09-20-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-09-20-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-09-20-saipem-bullish-on-guyana-project-milestone",
+      "2026-09-20-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "2026-09-20-dieptepunt-voor-gezondheidszorg-in-suriname",
+      "2026-09-20-stevan-rudinac-benoemd-tot-hoogleraar-artificial-intelligence-for-busi",
+      "2026-09-20-suriname-receives-grant-for-flood-protection-systems"
+    ]
+  },
+  {
     "date": "2026-09-19",
     "displayDate": "Zaterdag 19 september 2026",
     "number": "Editie 260",
