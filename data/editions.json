@@ -1,5 +1,31 @@
 [
   {
+    "date": "2026-09-23",
+    "displayDate": "Woensdag 23 september 2026",
+    "number": "Editie 264",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 208",
+    "exchangeRate": {
+      "date": "2026-09-22",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 43.2295
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-09-23-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-09-23-simons-bij-vn-olie-en-gas-mogen-niet-enige-basis-surinaamse-economie-w",
+      "2026-09-23-front-runner-emerges-for-alluring-venus-fpso",
+      "2026-09-23-air-france-lanceert-nieuwe-route-van-fortaleza-naar-cayenne-frans-guya",
+      "2026-09-23-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "2026-09-23-medische-zending-al-25-jaar-onmisbaar-voor-zorg-in-suriname",
+      "2026-09-23-interstellar-group-organiseert-fusion-forward-over-ai-security-en-werk",
+      "2026-09-23-suriname-receives-grant-for-flood-protection-systems"
+    ]
+  },
+  {
     "date": "2026-09-22",
     "displayDate": "Dinsdag 22 september 2026",
     "number": "Editie 263",
