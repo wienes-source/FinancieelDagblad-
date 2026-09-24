@@ -1,5 +1,31 @@
 [
   {
+    "date": "2026-09-24",
+    "displayDate": "Donderdag 24 september 2026",
+    "number": "Editie 265",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 209",
+    "exchangeRate": {
+      "date": "2026-09-23",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 43.4105
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-09-24-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-09-24-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-09-24-front-runner-emerges-for-alluring-venus-fpso",
+      "2026-09-24-air-france-lanceert-nieuwe-route-van-fortaleza-naar-cayenne-frans-guya",
+      "2026-09-24-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "2026-09-24-medische-zending-al-25-jaar-onmisbaar-voor-zorg-in-suriname",
+      "2026-09-24-in-samenwerking-met-qualcomm-technologies-brengt-liquid-ai-persoonlijk",
+      "2026-09-24-suriname-receives-grant-for-flood-protection-systems"
+    ]
+  },
+  {
     "date": "2026-09-23",
     "displayDate": "Woensdag 23 september 2026",
     "number": "Editie 264",
