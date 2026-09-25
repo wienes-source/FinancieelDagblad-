@@ -1,5 +1,31 @@
 [
   {
+    "date": "2026-09-25",
+    "displayDate": "Vrijdag 25 september 2026",
+    "number": "Editie 266",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 207",
+    "exchangeRate": {
+      "date": "2026-09-24",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 43.122
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-09-25-simons-en-jetten-bespreken-onderwijs-justitie-zorg-en-economie",
+      "2026-09-25-simons-bij-vn-olie-en-gas-mogen-niet-enige-basis-surinaamse-economie-w",
+      "2026-09-25-front-runner-emerges-for-alluring-venus-fpso",
+      "2026-09-25-air-france-lanceert-nieuwe-route-van-fortaleza-naar-cayenne-frans-guya",
+      "2026-09-25-innovation-engine-under-pressure-tech-and-platform-ecosystem-facing-mo",
+      "2026-09-25-medische-zending-al-25-jaar-onmisbaar-voor-zorg-in-suriname",
+      "2026-09-25-sharjah-pleit-voor-een-prominentere-rol-voor-vrouwen-in-de-technologie",
+      "2026-09-25-major-projects-in-china-s-15th-five-year-plan-open-up-new-job-opportun"
+    ]
+  },
+  {
     "date": "2026-09-24",
     "displayDate": "Donderdag 24 september 2026",
     "number": "Editie 265",
