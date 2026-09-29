@@ -86,6 +86,7 @@ def main():
                 fresh.append(article)
         except Exception as exc:
             print("Kon feed niet ophalen:", query, exc)
+    fresh = list({article["id"]: article for article in fresh}.values())
     if not fresh:
         raise RuntimeError("Geen actuele artikelen opgehaald")
     try:
