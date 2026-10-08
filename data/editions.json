@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-10-08",
+    "displayDate": "Donderdag 8 oktober 2026",
+    "number": "Editie 279",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 204",
+    "exchangeRate": {
+      "date": "2026-10-07",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 42.4135
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-10-08-suriname-wacht-op-oliemiljarden-worden-verwachtingen-ingelost",
+      "2026-10-08-suriname-3-0-summit-moet-oliegroei-koppelen-aan-brede-economische-tran",
+      "2026-10-08-saipem-bullish-on-guyana-project-milestone",
+      "2026-10-08-42-indian-stocks-best-high-growth-potential-investing-ideas",
+      "2026-10-08-medische-zending-al-25-jaar-onmisbaar-voor-zorg-in-suriname",
+      "2026-10-08-destination-ai-van-ai-interesse-naar-concreet-aanbod-voor-partners",
+      "2026-10-08-us-japan-announce-40-bn-nuclear-power-project"
+    ]
+  },
+  {
     "date": "2026-10-07",
     "displayDate": "Woensdag 7 oktober 2026",
     "number": "Editie 278",
