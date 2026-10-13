@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-10-13",
+    "displayDate": "Dinsdag 13 oktober 2026",
+    "number": "Editie 284",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 203",
+    "exchangeRate": {
+      "date": "2026-10-12",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 42.117
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-10-13-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-10-13-olie-inkomsten-moeten-suriname-minder-afhankelijk-maken",
+      "2026-10-13-nyt-venezuela-navy-interrupts-oil-exploration-off-guyana",
+      "2026-10-13-modi-wants-india-to-power-the-ai-age-residents-are-pushing-back",
+      "2026-10-13-medische-zending-al-25-jaar-onmisbaar-voor-zorg-in-suriname",
+      "2026-10-13-human-tech-is-juist-nu-keihard-nodig-vindt-sopra-steria",
+      "2026-10-13-us-japan-announce-40-bn-nuclear-power-project"
+    ]
+  },
+  {
     "date": "2026-10-12",
     "displayDate": "Maandag 12 oktober 2026",
     "number": "Editie 283",
