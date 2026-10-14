@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-10-14",
+    "displayDate": "Woensdag 14 oktober 2026",
+    "number": "Editie 285",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 202",
+    "exchangeRate": {
+      "date": "2026-10-13",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 42.06
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-10-14-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-10-14-olie-inkomsten-moeten-suriname-minder-afhankelijk-maken",
+      "2026-10-14-nyt-venezuela-navy-interrupts-oil-exploration-off-guyana",
+      "2026-10-14-statement-on-solvinity-prohibition",
+      "2026-10-14-medische-zending-al-25-jaar-onmisbaar-voor-zorg-in-suriname",
+      "2026-10-14-gartner-analist-bettina-tratz-ryan-haal-het-kunstmatige-uit-intelligen",
+      "2026-10-14-minister-nurmohamed-presenteert-infrastructuurambities-op-forum-in-chi"
+    ]
+  },
+  {
     "date": "2026-10-13",
     "displayDate": "Dinsdag 13 oktober 2026",
     "number": "Editie 284",
