@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075c46">
+  <title>Archief | FINANCIEEL DAGBLAD WINN</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="toegang.css">
+</head>
+<body>
+  <header class="compact-header pagewide">
+    <a class="back-home" href="index.html">← Voorpagina</a>
+    <div><h1>FINANCIEEL DAGBLAD <strong>WINN</strong></h1><p>Digitaal archief</p></div>
+  </header>
+  <main class="archive-main">
+    <div id="toegangBalk" class="toegang-balk" hidden></div>
+    <section class="archive-hero">
+      <span class="eyebrow">ARCHIEF</span>
+      <h2>Alle edities op datum</h2>
+      <p>De nieuwste editie staat automatisch bovenaan. Klik op een editie om de artikelen te openen.</p>
+    </section>
+    <div class="archive-tools">
+      <input id="archiveSearch" type="search" placeholder="Zoek op datum, editie of onderwerp…">
+    </div>
+    <section id="editionList" class="edition-list" aria-live="polite"></section>
+  </main>
+  <footer>
+    <div><strong>FINANCIEEL DAGBLAD WINN</strong><span>Paramaribo</span></div>
+    <div class="footer-meta"><span>© 2026</span></div>
+  </footer>
+  <script src="toegang-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="toegang.js"></script>
+  <script src="pricing.js"></script>
+  <script src="archive.js"></script>
+<script src="js/teller.js"></script></body>
+</html>

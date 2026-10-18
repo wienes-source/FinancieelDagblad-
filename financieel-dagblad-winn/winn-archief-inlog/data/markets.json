@@ -1,0 +1,68 @@
+{
+  "updated": "2026-09-05",
+  "label": "Nog niet automatisch bijgewerkt. De eerste automatische update volgt bij de volgende ochtendrun.",
+  "fx": [
+    {
+      "name": "USD/SRD",
+      "value": "37,91",
+      "day": "+0,12",
+      "week": "+1,05%"
+    },
+    {
+      "name": "EUR/SRD",
+      "value": "44,09",
+      "day": "+0,18",
+      "week": "+0,41%"
+    },
+    {
+      "name": "EUR/USD",
+      "value": "1,1630",
+      "day": "+0,02",
+      "week": "+0,30%"
+    }
+  ],
+  "commodities": [
+    {
+      "name": "Goud",
+      "value": "4.468",
+      "trend": "+2,1%"
+    },
+    {
+      "name": "Olie Brent",
+      "value": "96,06",
+      "trend": "+4,5%"
+    },
+    {
+      "name": "Olie WTI",
+      "value": "92,10",
+      "trend": "+4,8%"
+    },
+    {
+      "name": "Bauxiet (USD/ton)",
+      "value": "58,00",
+      "trend": "+1,8%"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "DSB",
+      "value": "36,50",
+      "trend": "+1,4%"
+    },
+    {
+      "name": "FHB",
+      "value": "22,00",
+      "trend": "0,0%"
+    },
+    {
+      "name": "SPSB",
+      "value": "9,80",
+      "trend": "+2,1%"
+    },
+    {
+      "name": "SURI",
+      "value": "4,25",
+      "trend": "-1,2%"
+    }
+  ]
+}
