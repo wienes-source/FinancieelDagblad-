@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-10-18",
+    "displayDate": "Zondag 18 oktober 2026",
+    "number": "Editie 289",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 202",
+    "exchangeRate": {
+      "date": "2026-10-13",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 42.06
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-10-18-simons-wil-banken-meer-laten-investeren-in-surinaamse-economie",
+      "2026-10-18-suriname-rekent-zich-rijk-na-nieuwe-olie-en-gasvondst-voor-de-kust",
+      "2026-10-18-nyt-venezuela-navy-interrupts-oil-exploration-off-guyana",
+      "2026-10-18-statement-on-solvinity-prohibition",
+      "2026-10-18-consultant-is4h-zaken-verkeerd-ge-nterpreteerd-door-minister",
+      "2026-10-18-vertrouwen-in-eigen-ai-strategie-daalt-bij-nederlandse-bestuurders",
+      "2026-10-18-uruguay-announces-data-center-project-worth-5-7-bn"
+    ]
+  },
+  {
     "date": "2026-10-17",
     "displayDate": "Zaterdag 17 oktober 2026",
     "number": "Editie 288",
