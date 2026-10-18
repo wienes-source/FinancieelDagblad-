@@ -1,0 +1,13 @@
+{
+  "date": "5 september 2026",
+  "toelichting": "Pas deze waarden aan wanneer er nieuwe cijfers zijn, en zet de datum hierboven op de dag van invoer. Dit bestand wordt niet automatisch bijgewerkt.",
+  "commodities": [
+    { "name": "Bauxiet (USD/ton)", "value": "58,00", "trend": "+1,8%" }
+  ],
+  "stocks": [
+    { "name": "DSB", "value": "36,50", "trend": "+1,4%" },
+    { "name": "FHB", "value": "22,00", "trend": "0,0%" },
+    { "name": "SPSB", "value": "9,80", "trend": "+2,1%" },
+    { "name": "SURI", "value": "4,25", "trend": "-1,2%" }
+  ]
+}
