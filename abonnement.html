@@ -2,7 +2,7 @@
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#075c46"><title>Abonnement | FINANCIEEL DAGBLAD WINN</title>
 <meta name="description" content="FINANCIEEL DAGBLAD WINN — economie, ontwikkeling en welvaart in Suriname.">
-<link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css"></head>
+<link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="toegang.css"></head>
 <body >
 <div class="topbar"><div class="pagewide"><span>FINANCIEEL DAGBLAD WINN · Paramaribo</span><span class="hide-mobile"><a href="abonnement.html">Abonnement</a><a href="over-ons.html">Over ons</a></span></div></div>
 <header class="masthead">
@@ -15,6 +15,7 @@
   <a href="markten.html">MARKTEN</a>
   <a href="regio.html">REGIO &amp; WERELD</a>
   <a href="sectoren.html">SECTOREN</a>
+  <a href="columns.html">COLUMNS</a>
   <a href="archief.html">ARCHIEF</a>
 </nav>
 </div>
@@ -22,18 +23,68 @@
 </header>
 <div class="progress-strip"><b>SURINAME STAP VOORUIT</b><span>STABIELE ECONOMIE</span><span>STERKE SAMENLEVING</span><span>EEN DUURZAME TOEKOMST</span></div>
 <main>
-<section class="page-title"><span class="eyebrow">ABONNEMENT</span><h2>FINANCIEEL DAGBLAD WINN lezen</h2><p>Deze pagina is voorbereid voor digitale en papieren abonnementen.</p></section>
+<section class="page-title"><span class="eyebrow">ABONNEMENT</span><h2>FINANCIEEL DAGBLAD WINN lezen</h2><p>De nieuwste editie is gratis. Met een abonnement lees je ook het volledige archief.</p></section>
 <div class="static-copy">
-  <h3>Digitaal</h3><p>De digitale krant is geschikt voor telefoon, tablet en computer. Het archief geeft toegang tot eerdere edities en losse artikelen.</p>
-  <h3>Print</h3><p>De website kan later worden gekoppeld aan een bestel- of abonnementsformulier voor papieren edities.</p>
-  <div class="callout"><b>Volgende koppeling:</b> zodra het gewenste e-mailadres of betaalsysteem bekend is, kan de abonnementsaanvraag hier rechtstreeks aan worden gekoppeld.</div>
-  <p><a class="button" href="contact.html">Naar contact</a> <a class="button" href="archief.html">Bekijk edities</a></p>
+  <div id="toegangBalk" class="toegang-balk" hidden></div>
+  <div id="pakketten" class="login-grid"></div>
+  <section id="aanvraagVak" class="login-blok" style="margin-top:16px" hidden>
+    <h3>Abonnement aanvragen</h3>
+    <form id="aanvraag" novalidate>
+      <label for="pakket">Abonnement</label>
+      <select id="pakket" class="login-select"></select>
+      <label for="betaalwijze">Betaalwijze</label>
+      <select id="betaalwijze" class="login-select"></select>
+      <label for="opmerking">Opmerking (optioneel)</label>
+      <input id="opmerking" type="text" maxlength="300" placeholder="Bijvoorbeeld een factuuradres">
+      <button class="toegang-knop" type="submit">Abonnement aanvragen</button>
+    </form>
+    <div id="aanvraagMelding" class="login-melding" role="status"></div>
+  </section>
+  <section id="inlogVak" class="toegang-slot" hidden>
+    <h3>Eerst inloggen</h3>
+    <p>Log in met je e-mailadres, zodat het abonnement aan jouw account wordt gekoppeld.</p>
+    <a class="toegang-knop" href="login.html?terug=abonnement.html">Inloggen met e-mail</a>
+  </section>
+  <h3>Print</h3><p>Voor papieren edities of een zakelijk abonnement voor meerdere lezers kun je <a href="contact.html">contact</a> opnemen.</p>
 </div>
 </main>
 <footer>
   <div><strong>FINANCIEEL DAGBLAD WINN</strong><span>De krant voor economie, ontwikkeling en welvaart</span>
-    <div class="footer-links"><a href="index.html">Voorpagina</a><a href="archief.html">Archief</a><a href="abonnement.html">Abonnement</a><a href="over-ons.html">Over ons</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+    <div class="footer-links"><a href="index.html">Voorpagina</a><a href="archief.html">Archief</a><a href="columns.html">Columns</a><a href="abonnement.html">Abonnement</a><a href="over-ons.html">Over ons</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
   </div>
   <div class="footer-meta"><span>Paramaribo</span><span>Digitaal &amp; print</span><span>© 2026 FINANCIEEL DAGBLAD WINN</span></div>
 </footer>
-<script src="js/core.js"></script></body></html>
+<script src="js/core.js"></script>
+<script src="toegang-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="toegang.js"></script>
+<script>
+(async () => {
+  const T = WINN_TOEGANG, esc = WINN_AUTH.esc, $ = id => document.getElementById(id);
+  $('pakketten').innerHTML = T.pakketten.map(p => `<section class="login-blok"><h3>${esc(p.naam)}</h3>
+    <p><b>${esc(p.prijs)}</b><br>${esc(p.uitleg || '')}</p>
+    <button class="toegang-knop" type="button" data-pakket="${esc(p.id)}">Kies ${esc(p.naam.toLowerCase())}</button></section>`).join('');
+  $('pakket').innerHTML = T.pakketten.map(p => `<option value="${esc(p.id)}">${esc(p.naam)}, ${esc(p.prijs)}</option>`).join('');
+  $('betaalwijze').innerHTML = T.betaalwijzen.map(b => `<option>${esc(b)}</option>`).join('');
+  WINN_AUTH.balk($('toegangBalk'));
+  const s = await WINN_AUTH.status();
+  const toon = () => { (s.ingelogd && !s.demo ? $('aanvraagVak') : $('inlogVak')).hidden = false; };
+  document.querySelectorAll('[data-pakket]').forEach(b => b.addEventListener('click', () => {
+    $('pakket').value = b.dataset.pakket; toon();
+    (s.ingelogd && !s.demo ? $('aanvraagVak') : $('inlogVak')).scrollIntoView({ behavior: 'smooth' });
+  }));
+  if (s.ingelogd && !s.demo) toon();
+  $('aanvraag').addEventListener('submit', async e => {
+    e.preventDefault();
+    const m = $('aanvraagMelding'), knop = e.target.querySelector('button');
+    knop.disabled = true; m.className = 'login-melding'; m.textContent = 'Aanvraag wordt verstuurd…';
+    const { data, error } = await WINN_SB.from('abonnement_aanvragen').insert({
+      email: s.email, pakket: $('pakket').value, betaalwijze: $('betaalwijze').value,
+      opmerking: $('opmerking').value.trim() || null }).select('kenmerk').single();
+    knop.disabled = false;
+    if (error) { m.className += ' fout'; m.textContent = 'De aanvraag is niet verstuurd: ' + error.message; return; }
+    e.target.hidden = true;
+    m.innerHTML = `<b>Aanvraag ontvangen. Je kenmerk is ${esc(data.kenmerk)}.</b><br>${esc(T.betaalinstructie)}`;
+  });
+})();
+</script><script src="js/teller.js"></script></body></html>

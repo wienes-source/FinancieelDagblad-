@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075c46">
+  <title>Inloggen | FINANCIEEL DAGBLAD WINN</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="toegang.css">
+</head>
+<body>
+  <header class="compact-header pagewide">
+    <a class="back-home" href="archief.html">← Archief</a>
+    <div><h1>FINANCIEEL DAGBLAD <strong>WINN</strong></h1><p>Toegang tot het archief</p></div>
+  </header>
+  <main class="archive-main">
+    <section class="archive-hero">
+      <h2>Lees het volledige archief</h2>
+      <p>De nieuwste editie is gratis. Voor alle eerdere edities kies je hieronder de demo of een persoonlijke proefmaand.</p>
+    </section>
+    <div class="login-grid">
+      <section class="login-blok">
+        <h3>Bekijk de demo</h3>
+        <p>Blader meteen door alle edities, zonder account aan te maken.</p>
+        <button class="toegang-knop" id="demo">Open de demo</button>
+        <div id="demoMelding" class="login-melding" role="status"></div>
+      </section>
+      <section class="login-blok proef">
+        <h3>Een maand gratis lezen</h3>
+        <p>Vul je e-mailadres in. Je ontvangt een inloglink en hebt 30 dagen volledige toegang.</p>
+        <form id="proef" novalidate>
+          <label for="email">E-mailadres</label>
+          <input id="email" type="email" autocomplete="email" required placeholder="naam@voorbeeld.com">
+          <button class="toegang-knop" type="submit">Stuur mijn inloglink</button>
+        </form>
+        <div id="proefMelding" class="login-melding" role="status"></div>
+        <p style="margin-top:12px;font-size:13px">Al eerder aangemeld? Vul hetzelfde adres in om weer in te loggen.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div><strong>FINANCIEEL DAGBLAD WINN</strong><span>Paramaribo</span></div>
+    <div class="footer-meta"><span>© 2026</span></div>
+  </footer>
+  <script src="toegang-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="toegang.js"></script>
+  <script>
+    const ruw = new URLSearchParams(location.search).get('terug') || 'archief.html';
+    const terug = /^[\w.-]+\.html(\?[\w=&%.-]*)?$/.test(ruw) ? ruw : 'archief.html';
+    const verder = () => location.href = terug;
+
+    WINN_SB.auth.getSession().then(({ data }) => { if (data.session) verder(); });
+
+    document.getElementById('demo').addEventListener('click', async e => {
+      const knop = e.currentTarget, m = document.getElementById('demoMelding');
+      knop.disabled = true; m.className = 'login-melding'; m.textContent = 'Demo wordt geopend…';
+      const { error } = await WINN_SB.auth.signInWithPassword({
+        email: WINN_TOEGANG.demoEmail, password: WINN_TOEGANG.demoWachtwoord });
+      if (error) { m.className += ' fout'; m.textContent = 'De demo is nu niet beschikbaar. Probeer het later opnieuw.'; knop.disabled = false; return; }
+      verder();
+    });
+
+    document.getElementById('proef').addEventListener('submit', async e => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const m = document.getElementById('proefMelding'), knop = e.target.querySelector('button');
+      m.className = 'login-melding';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { m.className += ' fout'; m.textContent = 'Vul een geldig e-mailadres in.'; return; }
+      knop.disabled = true; m.textContent = 'Inloglink wordt verstuurd…';
+      const { error } = await WINN_SB.auth.signInWithOtp({
+        email, options: { emailRedirectTo: new URL(terug, location.href).href } });
+      knop.disabled = false;
+      if (error) { m.className += ' fout'; m.textContent = 'Versturen lukte niet: ' + error.message; return; }
+      m.textContent = 'Inloglink verstuurd naar ' + email + '. Open de e-mail en tik op de link.';
+    });
+  </script>
+<script src="js/teller.js"></script></body>
+</html>
