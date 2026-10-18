@@ -1,0 +1,25 @@
+/* Inlog en archieftoegang — sluit aan op styles.css */
+.toegang-balk{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+  background:#e4f1eb;border-left:5px solid var(--green);padding:10px 14px;margin:0 0 16px;font-size:14px;color:#123}
+.toegang-knop{display:inline-block;background:var(--green);color:#fff;border:0;border-radius:4px;
+  padding:9px 14px;font:700 14px Arial,Helvetica,sans-serif;text-decoration:none;cursor:pointer}
+.toegang-knop.licht{background:#fff;color:var(--green);border:1px solid var(--green)}
+.toegang-knop:disabled{opacity:.6;cursor:wait}
+.toegang-knop:focus-visible,.login-blok input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.toegang-slot{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);padding:18px;margin:10px 0}
+.toegang-slot h3{font-family:Georgia,serif;font-size:22px;margin:0 0 6px}
+.toegang-slot p{margin:0 0 12px;color:var(--muted);line-height:1.5}
+.slot-label{color:var(--red);font-weight:700}
+.login-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.login-blok{background:#fff;border:1px solid var(--line);border-top:4px solid var(--green);padding:20px}
+.login-blok.proef{border-top-color:var(--gold)}
+.login-blok h3{font-family:Georgia,serif;font-size:24px;margin:0 0 6px}
+.login-blok p{line-height:1.5;color:#485850;margin:0 0 14px}
+.login-blok label{display:block;font-weight:700;font-size:14px;margin-bottom:4px}
+.login-blok input{width:100%;padding:11px;font-size:16px;border:1px solid var(--line);border-radius:4px;margin-bottom:12px}
+.login-melding{margin-top:10px;font-size:14px;line-height:1.4}
+.login-melding.fout{color:var(--red)}
+@media(max-width:760px){.login-grid{grid-template-columns:1fr}}
+.login-select{width:100%;padding:11px;font-size:16px;border:1px solid var(--line);border-radius:4px;margin-bottom:12px;background:#fff}
+.deel-balk{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.deel-balk a,.deel-balk button{font:700 13px Arial,Helvetica,sans-serif;padding:8px 12px;border-radius:4px;border:1px solid var(--green);color:var(--green);background:#fff;text-decoration:none;cursor:pointer}
