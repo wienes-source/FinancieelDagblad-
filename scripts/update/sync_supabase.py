@@ -2,7 +2,7 @@
 alleen de nieuwste editie openbaar in de repository.
 
 Vereist GitHub-secrets SUPABASE_URL en SUPABASE_SERVICE_KEY.
-Zonder die secrets doet dit script niets, zodat de site gewoon blijft werken.
+Zonder deze secrets stopt publicatie om toegang tot oude edities af te schermen.
 """
 import json
 import os
@@ -31,8 +31,7 @@ def upsert(table, conflict, rows):
 
 def main():
     if not URL or not KEY:
-        print("Supabase-secrets ontbreken; archief niet gesynchroniseerd.")
-        return 0
+        raise RuntimeError("Supabase-secrets ontbreken; publicatie uit veiligheid gestopt.")
     articles = json.loads(ARTICLES_FILE.read_text(encoding="utf-8"))
     editions = json.loads(EDITIONS_FILE.read_text(encoding="utf-8"))
     articles = list({a["id"]: a for a in articles}.values())
@@ -53,7 +52,6 @@ def main():
     latest = max(editions, key=lambda e: e["date"])
     keep = set(latest.get("articleIds", []))
     public_articles = [a for a in articles if a["id"] in keep or a.get("date") == latest["date"]]
-    EDITIONS_FILE.write_text(json.dumps([latest], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     ARTICLES_FILE.write_text(json.dumps(public_articles, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Openbare bestanden ingekort tot editie {latest['date']} ({len(public_articles)} artikelen).")
     return 0
