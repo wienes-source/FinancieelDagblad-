@@ -1,9 +1,7 @@
 // Vul in vanuit Supabase > Project Settings > API
 window.WINN_TOEGANG = {
-  supabaseUrl: "https://JOUW-PROJECT.supabase.co",
-  supabaseKey: "JOUW-ANON-PUBLIC-KEY",          // 'anon public', nooit de service_role
-  demoEmail: "demo@financieeldagbladwinn.com",
-  demoWachtwoord: "WINN-Demo-2026",
+  supabaseUrl: "https://kcdhcesvrevlsshlvinx.supabase.co",
+  supabaseKey: "sb_publishable_CjWbAPvfovGp8Q4c47Za4Q_Vqj0M5tC",          // 'anon public', nooit de service_role
 
   // Abonnementen — pas prijzen en teksten aan
   pakketten: [
@@ -11,5 +9,5 @@ window.WINN_TOEGANG = {
     { id: "jaar",  naam: "Jaarabonnement",  prijs: "€ 99 per jaar",     uitleg: "Twee maanden voordeel." }
   ],
   betaalwijzen: ["Bankoverschrijving (Nederland)", "Bankoverschrijving (Suriname)", "Mope", "Uni5Pay"],
-  betaalinstructie: "Maak het bedrag over naar IBAN NL00 BANK 0000 0000 00 t.n.v. FINANCIEEL DAGBLAD WINN, of in Suriname naar rekening 0000000 bij [bank]. Vermeld het kenmerk. Je abonnement wordt binnen één werkdag na ontvangst geactiveerd."
+  betaalinstructie: "De betaalgegevens worden afzonderlijk bevestigd. Maak geen bedrag over voordat je een bevestiging hebt ontvangen."
 };
