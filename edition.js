@@ -9,10 +9,8 @@ async function laad(date) {
     const e = editions.find(x => x.date === date) || editions[0];
     const { data: arts } = await WINN_SB.from('artikelen').select('*').in('id', e.articleIds);
     return { e, nieuwste: editions[0].date, articles: (arts || []).map(WINN_AUTH.artikel) };
-  } catch (_) {
-    const [editions, articles] = await Promise.all([getJSON('data/editions.json'), getJSON('data/articles.json')]);
-    const sorted = editions.slice().sort((a, b) => b.date.localeCompare(a.date));
-    return { e: sorted.find(x => x.date === date) || sorted[0], nieuwste: sorted[0].date, articles };
+  } catch (error) {
+    throw error;
   }
 }
 (async () => {
