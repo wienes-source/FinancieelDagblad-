@@ -5,10 +5,8 @@ async function laadEdities() {
     const { data, error } = await WINN_SB.from('edities').select('*').order('datum', { ascending: false });
     if (error || !data?.length) throw error || Error('leeg');
     return data.map(WINN_AUTH.editie);
-  } catch (_) {
-    const r = await fetch('data/editions.json', { cache: 'no-store' });
-    if (!r.ok) throw Error();
-    return r.json();
+  } catch (error) {
+    throw error;
   }
 }
 function render(editions, q, price, toegang, ingelogd) {
