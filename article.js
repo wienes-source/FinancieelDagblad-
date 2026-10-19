@@ -9,10 +9,8 @@ async function laad(id) {
     const { data: rel } = await WINN_SB.from('artikelen').select('id, rubriek, titel, datum')
       .eq('datum', data.datum).neq('id', data.id).limit(4);
     return { a: WINN_AUTH.artikel(data), related: (rel || []).map(WINN_AUTH.artikel) };
-  } catch (_) {
-    const articles = await getJSON('data/articles.json');
-    const a = articles.find(x => x.id === id) || null;
-    return { a, related: a ? articles.filter(x => x.id !== a.id && x.date === a.date).slice(0, 4) : [] };
+  } catch (error) {
+    throw error;
   }
 }
 (async () => {
