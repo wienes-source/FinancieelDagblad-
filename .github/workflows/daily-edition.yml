@@ -22,6 +22,11 @@ jobs:
           python-version: "3.12"
       - name: Dagelijkse editie uitvoeren
         run: python scripts/update/content.py
+      - name: Synchroniseer beveiligd archief met Supabase
+        env:
+          SUPABASE_URL: https://kcdhcesvrevlsshlvinx.supabase.co
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/update/sync_supabase.py
       - name: Wijzigingen publiceren
         run: |
           git config user.name "github-actions[bot]"
