@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-11-14",
+    "displayDate": "Zaterdag 14 november 2026",
+    "number": "Editie 290",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 202",
+    "exchangeRate": {
+      "date": "2026-11-13",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 41.97
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-14-komst-olie-suriname-gaat-economie-en-samenleving-drastisch-veranderen",
+      "2026-11-14-exxonmobil-reviews-gas-mix-at-guyana-s-stabroek-block-amid-expansion-p",
+      "2026-11-14-waving-goodbye-to-2024-with-another-successful-copernicus-launch-senti",
+      "2026-11-14-wef-lanceert-vijf-nieuwe-tech-centra",
+      "2026-11-14-health-sector-welcomes-23-doctor-assistants",
+      "2026-11-14-anouk-dutr-e-hpe-begin-bij-de-business-kies-daarna-pas-de-technologie",
+      "2026-11-14-uruguay-announces-data-center-project-worth-5-7-bn"
+    ]
+  },
+  {
     "date": "2026-10-18",
     "displayDate": "Zondag 18 oktober 2026",
     "number": "Editie 289",
