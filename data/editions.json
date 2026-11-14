@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-11-15",
+    "displayDate": "Zondag 15 november 2026",
+    "number": "Editie 291",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 202",
+    "exchangeRate": {
+      "date": "2026-11-13",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 41.97
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-15-de-weg-vrijmaken-voor-bedrijven-om-de-technologische-uitdagingen-van-h"
+    ]
+  },
+  {
     "date": "2026-11-14",
     "displayDate": "Zaterdag 14 november 2026",
     "number": "Editie 290",
