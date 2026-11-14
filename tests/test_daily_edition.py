@@ -49,9 +49,14 @@ class DailyEditionTest(unittest.TestCase):
                 self.assertEqual(first, current)
                 self.assertEqual(current[0]['articleIds'], [a['id'] for a in rows])
                 with patch.object(content, 'fetch_article', return_value=None):
+                    self.assertFalse(content.main())
+                self.assertEqual(current, json.loads(editions.read_text()))
+                self.assertEqual(rows, json.loads(articles.read_text()))
+                articles.write_text('[]')
+                editions.write_text('[]')
+                with patch.object(content, 'fetch_article', return_value=None):
                     with self.assertRaises(RuntimeError):
                         content.main()
-                self.assertEqual(current, json.loads(editions.read_text()))
 
 if __name__ == '__main__':
     unittest.main()

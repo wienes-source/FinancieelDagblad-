@@ -103,7 +103,10 @@ def main():
             print("Kon feed niet ophalen:", query, exc)
     fresh = list({article["id"]: article for article in fresh}.values())
     if not fresh:
-        raise RuntimeError("Geen actuele artikelen opgehaald")
+        if not articles or not editions:
+            raise RuntimeError("Geen actuele artikelen opgehaald en geen bestaande editie beschikbaar")
+        print("::warning::Geen recent nieuws beschikbaar; de bestaande editie en datum blijven ongewijzigd.")
+        return False
     try:
         exchange_rate = fetch_exchange_rate()
     except Exception as exc:
@@ -116,6 +119,7 @@ def main():
     write_json(ARTICLES_FILE, fresh)
     write_json(EDITIONS_FILE, [edition] + previous)
     print("Nieuwe editie:", edition["displayDate"], f"({len(fresh)} artikelen)")
+    return True
 
 if __name__ == "__main__":
     main()
