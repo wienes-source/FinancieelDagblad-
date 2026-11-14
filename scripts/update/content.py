@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, date
 from pathlib import Path
 from decimal import Decimal, ROUND_CEILING
+from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
 
 ARTICLES_FILE = Path("data/articles.json")
@@ -34,16 +35,30 @@ def fetch_article(query, section, image, today):
     url = "https://news.google.com/rss/search?q=" + urllib.parse.quote(query) + "&hl=nl&gl=NL&ceid=NL:nl"
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 FINANCIEEL-DAGBLAD-WINN/1.0"})
     with urllib.request.urlopen(request, timeout=20) as response:
-        item = ET.fromstring(response.read()).find("./channel/item")
-    if item is None:
+        items = ET.fromstring(response.read()).findall("./channel/item")
+    # RSS relevance is not chronological: never relabel an old story as today.
+    now = datetime.now(TZ)
+    recent = []
+    for candidate in items:
+        try:
+            published = parsedate_to_datetime(candidate.findtext("pubDate", ""))
+            if published.tzinfo is None:
+                continue
+            age = (now - published).total_seconds()
+            if 0 <= age <= 72 * 3600:
+                recent.append((published, candidate))
+        except (TypeError, ValueError, OverflowError):
+            continue
+    if not recent:
         return None
+    published, item = max(recent, key=lambda entry: entry[0])
     title = clean(item.findtext("title", ""))
     description = clean(item.findtext("description", ""))
     link = item.findtext("link", "")
     headline, source = title.rsplit(" - ", 1) if " - " in title else (title, "Nieuwsbron")
     if not description:
         description = f"Actuele ontwikkeling binnen {section}. FINANCIEEL DAGBLAD WINN volgt de betekenis voor Suriname en de regio."
-    return {"id": f"{today}-{slug(headline)}", "date": today, "section": section, "title": headline.strip(), "subtitle": f"Actueel nieuws · bron: {source}", "image": image, "lead": description[:500], "body": [description[:900], "FINANCIEEL DAGBLAD WINN actualiseert dit onderwerp wanneer betrouwbare informatie beschikbaar komt."], "source": source, "sourceUrl": link}
+    return {"id": f"{today}-{slug(headline)}", "date": today, "publishedAt": published.isoformat(), "section": section, "title": headline.strip(), "subtitle": f"Actueel nieuws · bron: {source}", "image": image, "lead": description[:500], "body": [description[:900], "FINANCIEEL DAGBLAD WINN actualiseert dit onderwerp wanneer betrouwbare informatie beschikbaar komt."], "source": source, "sourceUrl": link}
 
 def dutch_date(now):
     days = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]

@@ -1,0 +1,17 @@
+# Ook de branch-publicatie mag alleen de actieve website tonen.
+exclude:
+  - content.json
+  - core.js
+  - home.js
+  - script.js
+  - scripts
+  - tests
+  - README.md
+  - Read.me
+  - LEESMIJ-TOEGANG.md
+  - VOORBEELD-NIEUWE-EDITIE.json
+  - supabase-setup.sql
+  - supabase-update-2.sql
+  - financieel-dagblad-winn
+  - winn-archief-inlog
+  - financieel-dagblad-winn-v4-een-commit.zip

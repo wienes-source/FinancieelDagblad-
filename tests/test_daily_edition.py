@@ -3,6 +3,9 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime
+from io import BytesIO
 from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location('content', 'scripts/update/content.py')
@@ -10,6 +13,25 @@ content = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(content)
 
 class DailyEditionTest(unittest.TestCase):
+    def test_feed_skips_old_undated_and_future_news(self):
+        now = datetime.now(timezone.utc)
+        old = format_datetime(now - timedelta(days=300), usegmt=True)
+        current = format_datetime(now - timedelta(hours=2), usegmt=True)
+        future = format_datetime(now + timedelta(days=1), usegmt=True)
+        xml = f"""<rss><channel>
+        <item><title>Oud bericht</title><pubDate>{old}</pubDate></item>
+        <item><title>Zonder datum</title></item>
+        <item><title>Toekomst</title><pubDate>{future}</pubDate></item>
+        <item><title>Actueel - Bron</title><pubDate>{current}</pubDate><link>https://example.org/news</link></item>
+        </channel></rss>""".encode()
+        with patch.object(content.urllib.request, "urlopen", return_value=BytesIO(xml)):
+            article = content.fetch_article("test", "Economie", "assets/test.jpg", "2026-11-14")
+        self.assertEqual(article["title"], "Actueel")
+        self.assertEqual(article["source"], "Bron")
+        self.assertIn("publishedAt", article)
+        with patch.object(content.urllib.request, "urlopen", return_value=BytesIO(f"<rss><channel><item><title>Oud</title><pubDate>{old}</pubDate></item></channel></rss>".encode())):
+            self.assertIsNone(content.fetch_article("test", "Economie", "test", "2026-11-14"))
+
     def test_generation_and_rerun(self):
         with tempfile.TemporaryDirectory() as folder:
             articles = Path(folder) / 'articles.json'
@@ -33,3 +55,4 @@ class DailyEditionTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
