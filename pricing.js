@@ -1,6 +1,6 @@
-/* Indicative CBvS rate via Frankfurter; round the converted price, not the rate. */
+/* Indicative reference rate via Frankfurter; round the converted price, not the rate. */
 const WINN_PRICE = (() => {
-  const endpoint = 'https://api.frankfurter.dev/v2/providers/cbvs/rate/eur/srd';
+  const endpoint = 'https://api.frankfurter.dev/v2/rate/eur/srd';
   let pending;
   function validate(value, now = new Date()) {
     const day = /^\d{4}-\d{2}-\d{2}$/.test(value?.date || '') ? Date.parse(value.date + 'T00:00:00Z') : NaN;
@@ -30,7 +30,8 @@ const WINN_PRICE = (() => {
         rate = validate(saved?.exchangeRate);
       } catch (_) { return {label:'SRD niet beschikbaar', note:'Dagkoers tijdelijk niet beschikbaar.'}; }
     }
-    return {label:`SRD ${convert(rate.rate)}`, note:`Koers ${rate.date}: € 1 = ${new Intl.NumberFormat('nl-NL',{maximumFractionDigits:6}).format(rate.rate)} SRD · CBvS via Frankfurter`, rate};
+    return {label:`SRD ${convert(rate.rate)}`, note:`Koers ${rate.date}: € 1 = ${new Intl.NumberFormat('nl-NL',{maximumFractionDigits:6}).format(rate.rate)} SRD · Frankfurter referentiekoers`, rate};
   }
   return {load:()=>pending ||= fetchPrice(), validate, convert};
 })();
+

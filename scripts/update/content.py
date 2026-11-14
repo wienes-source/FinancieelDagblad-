@@ -60,7 +60,7 @@ def write_json(path, value):
         handle.write("\n")
 
 def fetch_exchange_rate():
-    url = "https://api.frankfurter.dev/v2/providers/cbvs/rate/eur/srd"
+    url = "https://api.frankfurter.dev/v2/rate/eur/srd"
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 WINN/1.0", "Accept": "application/json"})
     with urllib.request.urlopen(request, timeout=15) as response:
         rate = json.load(response)
@@ -97,9 +97,11 @@ def main():
     previous = [edition for edition in editions if edition.get("date") != today]
     numbers = [int(match.group(1)) for edition in previous for match in [re.search(r"(\d+)", edition.get("number", ""))] if match]
     edition = {"date": today, "displayDate": dutch_date(now), "number": f"Editie {max(numbers, default=0) + 1}", "year": "Jaargang 1", "priceEur": "€ 4,80", "priceSrd": edition_price(exchange_rate) if exchange_rate else "SRD niet beschikbaar", "exchangeRate": exchange_rate, "label": "Dagelijkse editie", "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.", "articleIds": [article["id"] for article in fresh]}
-    write_json(ARTICLES_FILE, fresh + [article for article in articles if article.get("date") != today])
+    # Alleen de nieuwste editie openbaar; oude artikelen blijven afgeschermd.
+    write_json(ARTICLES_FILE, fresh)
     write_json(EDITIONS_FILE, [edition] + previous)
     print("Nieuwe editie:", edition["displayDate"], f"({len(fresh)} artikelen)")
 
 if __name__ == "__main__":
     main()
+

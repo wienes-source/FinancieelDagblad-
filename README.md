@@ -1,34 +1,25 @@
-# FINANCIEEL DAGBLAD WINN — professionele digitale krant V2
+# FINANCIEEL DAGBLAD WINN
 
-Deze versie is geschikt voor GitHub Pages en bevat:
+Statische krant op GitHub Pages. Er is geen externe database, betaald account, API-sleutel of server nodig voor de dagelijkse editie.
 
-- professionele krantvormgeving;
-- klikbare artikelen;
-- zoekfunctie op de voorpagina;
-- digitaal archief per datum;
-- nieuwste editie automatisch bovenaan op basis van `data/editions.json`;
-- aparte editiepagina;
-- aparte artikelpagina;
-- mobiele weergave met grotere tekst;
-- PWA-basis zodat de site op een telefoon als web-app kan worden toegevoegd;
-- locatie in de webversie: **Paramaribo**.
+## Publiceren
 
-## Upload naar GitHub
+De workflow `.github/workflows/daily-edition.yml` draait dagelijks en na wijzigingen aan `main`. Hij controleert de code, haalt nieuws op, slaat de nieuwe editie op en publiceert `_site` via GitHub Pages. De workflow kan ook handmatig gestart worden via Actions > Daily Edition > Run workflow.
 
-Upload **de inhoud van deze map** naar de hoofdmap van uw repository. Vervang de bestaande bestanden met dezelfde naam.
+GitHub Pages moet als publicatiebron **GitHub Actions** gebruiken (Settings > Pages > Source).
 
-Belangrijk: laat GitHub Pages staan op:
-- Source: Deploy from a branch
-- Branch: main
-- Folder: /(root)
+`data/articles.json` bevat alleen de nieuwste openbare editie. `data/editions.json` bevat het overzicht van eerdere edities. Oudere afgeschermde artikelen worden niet openbaar gemaakt. Accountregistratie, betaalde archieftoegang en de automatische nieuwsbrief zijn uitgeschakeld. Historische gegevens in de voormalige database worden door deze wijziging niet verwijderd.
 
-Na de commit wordt de live website automatisch bijgewerkt.
+`scripts/build_site.py` publiceert alleen de actieve website en de benodigde gegevens. Oude sitekopieën, scripts, SQL-bestanden en `content.json` gaan niet mee naar de website.
 
-## Nieuwe dagelijkse editie toevoegen
+## Controle
 
-1. Voeg nieuwe artikelen toe aan `data/articles.json`.
-2. Voeg de nieuwe editie bovenaan toe aan `data/editions.json` (de website sorteert zelf op datum).
-3. Upload eventuele nieuwe afbeeldingen in `assets/`.
-4. Commit de wijzigingen.
+```sh
+python3 -m unittest discover -s tests -p 'test_*.py'
+node tests/homepage.cjs
+node tests/pricing.cjs
+node tests/publication.cjs
+python3 scripts/build_site.py
+```
 
-De nieuwste datum verschijnt vervolgens automatisch als 'Laatste editie'.
+GitHub Pages en de Actions-runners voor deze openbare repository kunnen met GitHub Free worden gebruikt. Er zijn geen betaalde diensten toegevoegd.

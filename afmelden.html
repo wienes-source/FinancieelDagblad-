@@ -15,21 +15,13 @@
     <a class="back-home" href="index.html">← Voorpagina</a>
     <div><h1>FINANCIEEL DAGBLAD <strong>WINN</strong></h1><p>Nieuwsbrief</p></div>
   </header>
-  <main class="archive-main">
-    <section class="archive-hero"><h2 id="kop">Bezig met afmelden…</h2><p id="tekst"></p></section>
-  </main>
-  <script src="toegang-config.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="toegang.js"></script>
-  <script>
-    (async () => {
-      const t = new URLSearchParams(location.search).get('t') || '';
-      const kop = document.getElementById('kop'), tekst = document.getElementById('tekst');
-      const { data, error } = /^[0-9a-f-]{36}$/i.test(t)
-        ? await WINN_SB.rpc('nieuwsbrief_afmelden', { token: t }) : { data: false };
-      if (!error && data) { kop.textContent = 'Je bent afgemeld'; tekst.textContent = 'Je ontvangt de ochtendmail niet meer. Je toegang tot het archief blijft gewoon bestaan.'; }
-      else { kop.textContent = 'Afmelden is niet gelukt'; tekst.textContent = 'De link is ongeldig of verlopen. Neem contact op via de contactpagina, dan melden we je handmatig af.'; }
-    })();
-  </script>
+  <main class="archive-main"><section class="archive-hero"><h2>Nieuwsbrief uitgeschakeld</h2>
+<p>De automatische ochtendmail is uitgeschakeld. Voor vragen over eerdere aanmeldingen kunt u <a href="contact.html">contact opnemen</a>.</p>
+<a class="edition-button" href="index.html">Naar de voorpagina</a></section></main>
+  
+  
+  
+  
 <script src="js/teller.js"></script></body>
 </html>
+
