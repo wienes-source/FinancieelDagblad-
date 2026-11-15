@@ -5,17 +5,17 @@
     "number": "Editie 291",
     "year": "Jaargang 1",
     "priceEur": "€ 4,80",
-    "priceSrd": "SRD 202",
+    "priceSrd": "SRD 201",
     "exchangeRate": {
-      "date": "2026-11-13",
+      "date": "2026-11-15",
       "base": "EUR",
       "quote": "SRD",
-      "rate": 41.97
+      "rate": 41.703
     },
     "label": "Dagelijkse editie",
     "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
     "articleIds": [
-      "2026-11-15-de-weg-vrijmaken-voor-bedrijven-om-de-technologische-uitdagingen-van-h"
+      "2026-11-15-9-best-growth-stocks-for-the-next-10-years-investing"
     ]
   },
   {
