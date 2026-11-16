@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-16",
+    "displayDate": "Maandag 16 november 2026",
+    "number": "Editie 292",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 200",
+    "exchangeRate": {
+      "date": "2026-11-16",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 41.526
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-16-rusland-prijst-bijdrage-sab-aan-surinaamse-economie",
+      "2026-11-16-gartner-ai-kostenbeheersing-en-energie-worden-strategische-prioriteite"
+    ]
+  },
+  {
     "date": "2026-11-15",
     "displayDate": "Zondag 15 november 2026",
     "number": "Editie 291",
