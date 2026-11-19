@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-19",
+    "displayDate": "Donderdag 19 november 2026",
+    "number": "Editie 295",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 198",
+    "exchangeRate": {
+      "date": "2026-11-19",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 41.112
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-19-reyme-51-jaar-onafhankelijkheid-maar-suriname-blijft-worstelen-met-fou",
+      "2026-11-19-eerbetoon-aan-de-51-beste-vietnamese-digitale-technologiebedrijven-van"
+    ]
+  },
+  {
     "date": "2026-11-18",
     "displayDate": "Woensdag 18 november 2026",
     "number": "Editie 294",
