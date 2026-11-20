@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-11-20",
+    "displayDate": "Vrijdag 20 november 2026",
+    "number": "Editie 296",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 198",
+    "exchangeRate": {
+      "date": "2026-11-19",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 41.106
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-20-gezondheidszorg-versnelt-investeringen-in-ai-nu-governance-en-risico-h"
+    ]
+  },
+  {
     "date": "2026-11-19",
     "displayDate": "Donderdag 19 november 2026",
     "number": "Editie 295",
