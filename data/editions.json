@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-22",
+    "displayDate": "Zondag 22 november 2026",
+    "number": "Editie 298",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 198",
+    "exchangeRate": {
+      "date": "2026-11-22",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 41.106
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-22-suriname-zoekt-investeringen-uit-qatar-voor-olie-infrastructuur-en-and",
+      "2026-11-22-indusind-bank-has-sought-to-recover-compensation-paid-to-ex-ceo-sumant",
+      "2026-11-22-europees-ai-office-zoekt-ai-oplossingen-voor-mkb"
+    ]
+  },
+  {
     "date": "2026-11-21",
     "displayDate": "Zaterdag 21 november 2026",
     "number": "Editie 297",
