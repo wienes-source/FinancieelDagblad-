@@ -1,6 +1,8 @@
 
+import html
 import json
 import re
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -26,17 +28,34 @@ FEEDS = [
 ]
 
 def clean(text):
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text or "")).strip()
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html.unescape(text or ""))).strip()
 
 def slug(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:70]
 
 def fetch_article(query, section, image, today):
-    url = "https://news.google.com/rss/search?q=" + urllib.parse.quote(query) + "&hl=nl&gl=NL&ceid=NL:nl"
-    request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 FINANCIEEL-DAGBLAD-WINN/1.0"})
-    with urllib.request.urlopen(request, timeout=20) as response:
-        items = ET.fromstring(response.read()).findall("./channel/item")
-    # RSS relevance is not chronological: never relabel an old story as today.
+    # Google News blijft de primaire bron. Bing Nieuws is een reserve bij HTTP 503,
+    # netwerkfouten of ongeldig RSS. Publiceer nooit een ongedateerd bericht.
+    encoded = urllib.parse.quote(query)
+    sources = [
+        ("Google Nieuws", f"https://news.google.com/rss/search?q={encoded}&hl=nl&gl=NL&ceid=NL:nl"),
+        ("Bing Nieuws", f"https://www.bing.com/news/search?q={encoded}&format=rss"),
+    ]
+    for provider, url in sources:
+        try:
+            request = urllib.request.Request(url, headers={
+                "User-Agent": "Mozilla/5.0 FINANCIEEL-DAGBLAD-WINN/1.0",
+                "Accept": "application/rss+xml, application/xml, text/xml",
+            })
+            with urllib.request.urlopen(request, timeout=15) as response:
+                items = ET.fromstring(response.read()).findall("./channel/item")
+            break
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ET.ParseError) as exc:
+            print(f"::warning::{provider} voor {section} niet bereikbaar: {exc}")
+    else:
+        return None
+
+    # RSS-relevantie is niet chronologisch: nooit oud nieuws als 'vandaag' presenteren.
     now = datetime.now(TZ)
     recent = []
     for candidate in items:
@@ -45,7 +64,7 @@ def fetch_article(query, section, image, today):
             if published.tzinfo is None:
                 continue
             age = (now - published).total_seconds()
-            if 0 <= age <= 72 * 3600:
+            if 0 <= age <= 72 * 3600 and candidate.findtext("link", "").strip():
                 recent.append((published, candidate))
         except (TypeError, ValueError, OverflowError):
             continue
@@ -54,11 +73,14 @@ def fetch_article(query, section, image, today):
     published, item = max(recent, key=lambda entry: entry[0])
     title = clean(item.findtext("title", ""))
     description = clean(item.findtext("description", ""))
-    link = item.findtext("link", "")
-    headline, source = title.rsplit(" - ", 1) if " - " in title else (title, "Nieuwsbron")
-    if not description:
-        description = f"Actuele ontwikkeling binnen {section}. FINANCIEEL DAGBLAD WINN volgt de betekenis voor Suriname en de regio."
-    return {"id": f"{today}-{slug(headline)}", "date": today, "publishedAt": published.isoformat(), "section": section, "title": headline.strip(), "subtitle": f"Actueel nieuws · bron: {source}", "image": image, "lead": description[:500], "body": [description[:900], "FINANCIEEL DAGBLAD WINN actualiseert dit onderwerp wanneer betrouwbare informatie beschikbaar komt."], "source": source, "sourceUrl": link}
+    link = item.findtext("link", "").strip()
+    headline, label = title.rsplit(" - ", 1) if " - " in title else (title, "")
+    source = clean(item.findtext("source", "")) or clean(label) or provider
+    if not headline.strip():
+        return None
+    if not description or description.lower().startswith(headline.lower()):
+        description = f"Lees het volledige nieuwsbericht bij {source} via de bronlink."
+    return {"id": f"{today}-{slug(headline)}", "date": today, "publishedAt": published.isoformat(), "section": section, "title": headline.strip(), "subtitle": f"Actueel nieuws · bron: {source}", "image": image, "lead": description[:500], "body": [description[:900]], "source": source, "sourceUrl": link}
 
 def dutch_date(now):
     days = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
