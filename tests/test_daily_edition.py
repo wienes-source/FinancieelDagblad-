@@ -32,6 +32,22 @@ class DailyEditionTest(unittest.TestCase):
         with patch.object(content.urllib.request, "urlopen", return_value=BytesIO(f"<rss><channel><item><title>Oud</title><pubDate>{old}</pubDate></item></channel></rss>".encode())):
             self.assertIsNone(content.fetch_article("test", "Economie", "test", "2026-11-14"))
 
+    def test_bing_fallback_on_google_503(self):
+        from urllib.error import HTTPError
+        now = datetime.now(timezone.utc)
+        current = format_datetime(now - timedelta(hours=1), usegmt=True)
+        xml = f"""<rss><channel><item><title>Economisch nieuws</title>
+        <description>Actuele &amp; controleerbare informatie</description>
+        <pubDate>{current}</pubDate><link>https://example.org/bericht</link>
+        </item></channel></rss>""".encode()
+        unavailable = HTTPError("https://news.google.com", 503, "Service Unavailable", None, None)
+        with patch.object(content.urllib.request, "urlopen", side_effect=[unavailable, BytesIO(xml)]) as fetch:
+            article = content.fetch_article("Suriname economie", "Economie", "test", "2026-11-23")
+        self.assertEqual(fetch.call_count, 2)
+        self.assertEqual(article["source"], "Bing Nieuws")
+        self.assertIn("Actuele & controleerbare", article["lead"])
+        self.assertEqual(article["sourceUrl"], "https://example.org/bericht")
+
     def test_generation_and_rerun(self):
         with tempfile.TemporaryDirectory() as folder:
             articles = Path(folder) / 'articles.json'
