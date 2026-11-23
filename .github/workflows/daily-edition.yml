@@ -5,9 +5,11 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "0 7 * * *"
+    - cron: "0 10 * * *"
+      timezone: "Europe/Amsterdam"
 
 permissions:
+  actions: read
   contents: write
   pages: write
   id-token: write
@@ -38,6 +40,7 @@ jobs:
           node tests/pricing.cjs
           node tests/publication.cjs
       - name: Dagelijkse editie uitvoeren
+        if: github.event_name != 'push'
         run: python scripts/update/content.py
       - name: Website bouwen zonder externe database
         run: python scripts/build_site.py
@@ -54,7 +57,32 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
+          name: github-pages-${{ github.run_attempt }}
           path: _site
+      # De artifact-API kan kort na upload nog lege resultaten geven.
+      - name: Wachten tot publicatiebestand beschikbaar is
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_NAME: github-pages-${{ github.run_attempt }}
+        run: |
+          for attempt in {1..12}; do
+            count="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?per_page=100"               --jq ".artifacts | map(select(.name == \"$ARTIFACT_NAME\" and .expired == false)) | length" 2>/dev/null)" || count=0
+            if [[ "$count" == "1" ]]; then
+              echo "Publicatiebestand gevonden (poging $attempt)."
+              exit 0
+            fi
+            if [[ "$count" != "0" ]]; then
+              echo "::error::Meerdere publicatiebestanden met dezelfde naam gevonden."
+              exit 1
+            fi
+            echo "Publicatiebestand nog niet zichtbaar (poging $attempt/12)."
+            sleep 5
+          done
+          echo "::error::Publicatiebestand niet zichtbaar in GitHub Actions."
+          exit 1
       - name: Website publiceren
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
