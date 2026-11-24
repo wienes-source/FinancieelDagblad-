@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-24",
+    "displayDate": "Dinsdag 24 november 2026",
+    "number": "Editie 299",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 197",
+    "exchangeRate": {
+      "date": "2026-11-24",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 41.039
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-24-onderzoeksteam-zoekt-na-40-jaar-getuigen-van-massamoord-suriname",
+      "2026-11-24-fundamentalco-neemt-nederlandse-ai-studio-move38-over"
+    ]
+  },
+  {
     "date": "2026-11-22",
     "displayDate": "Zondag 22 november 2026",
     "number": "Editie 298",
