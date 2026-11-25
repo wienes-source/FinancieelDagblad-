@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-25",
+    "displayDate": "Woensdag 25 november 2026",
+    "number": "Editie 300",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 197",
+    "exchangeRate": {
+      "date": "2026-11-25",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 40.92
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-25-onderzoeksteam-zoekt-na-40-jaar-getuigen-van-massamoord-suriname",
+      "2026-11-25-meer-dan-n-op-de-twee-belgen-gebruikt-ai"
+    ]
+  },
+  {
     "date": "2026-11-24",
     "displayDate": "Dinsdag 24 november 2026",
     "number": "Editie 299",
