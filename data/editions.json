@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-26",
+    "displayDate": "Donderdag 26 november 2026",
+    "number": "Editie 301",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 197",
+    "exchangeRate": {
+      "date": "2026-11-26",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 40.964
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-26-adhin-pleit-voor-investeringen-in-groene-economie-en-onderwijs-video",
+      "2026-11-26-don-van-der-does-wonderful-ai-agentic-transformatie-lukt-niet"
+    ]
+  },
+  {
     "date": "2026-11-25",
     "displayDate": "Woensdag 25 november 2026",
     "number": "Editie 300",
