@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-28",
+    "displayDate": "Zaterdag 28 november 2026",
+    "number": "Editie 303",
+    "year": "Jaargang 1",
+    "priceEur": "€ 4,80",
+    "priceSrd": "SRD 197",
+    "exchangeRate": {
+      "date": "2026-11-27",
+      "base": "EUR",
+      "quote": "SRD",
+      "rate": 40.908
+    },
+    "label": "Dagelijkse editie",
+    "summary": "Actueel financieel en economisch nieuws uit Suriname en de regio.",
+    "articleIds": [
+      "2026-11-28-suriname-krijgt-er-een-miljardenproject-bij-met-gaswinning-op-zee",
+      "2026-11-28-ai-moet-productie-bij-crelem-bakeries-beter-voorspelbaar-maken"
+    ]
+  },
+  {
     "date": "2026-11-27",
     "displayDate": "Vrijdag 27 november 2026",
     "number": "Editie 302",
